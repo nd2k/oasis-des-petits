@@ -1,0 +1,18 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-family: "Noto Sans", "serif";
+    --beige-1: 41 66 89;
+    --beige-2: 35 51 84;
+    --dark-green-1: 187 60 25;
+    --dark-green-2: 187 0 20;
+    --dark-green-3: 168 40 80;
+    --green-3: 187 60 60;
+    --black-0: 0 0 0;
+    --white-0: 0 0 100;
+
+    --lighter-primary: 187 60 60;
+    --tertiary: 74 100 84;
+    
+}

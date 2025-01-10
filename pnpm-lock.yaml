@@ -38,6 +38,12 @@ importers:
       globals:
         specifier: ^15.0.0
         version: 15.14.0
+      open-props:
+        specifier: ^1.7.10
+        version: 1.7.10
+      postcss-jit-props:
+        specifier: ^1.0.15
+        version: 1.0.15(postcss@8.4.49)
       prettier:
         specifier: ^3.3.2
         version: 3.4.2
@@ -47,6 +53,9 @@ importers:
       svelte:
         specifier: ^5.0.0
         version: 5.17.3
+      svelte-awesome-icons:
+        specifier: ^2.0.1
+        version: 2.0.1(svelte@5.17.3)
       svelte-check:
         specifier: ^4.0.0
         version: 4.1.3(svelte@5.17.3)(typescript@5.7.3)
@@ -864,6 +873,9 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
+  open-props@1.7.10:
+    resolution: {integrity: sha512-zZPJlr39YbHPou7mQ9GUKz1jiYjWzyZf/0pkPZq4MrtwgZ6FSCnf7hLkvFRGq+RZZ327vGSW3HPc7QMH4FUAZg==}
+
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
@@ -894,6 +906,12 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  postcss-jit-props@1.0.15:
+    resolution: {integrity: sha512-XHw5sCpuSo431tQ7Awaqlr4gfK+5HTR7JjofmUBLwJWa4vBO0okkNOXFgfPzf3QOHhfVgMtTbzeNqdNbUCf+nQ==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      postcss: ^8.2.8
 
   postcss-load-config@3.1.4:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
@@ -1004,6 +1022,12 @@ packages:
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
+
+  svelte-awesome-icons@2.0.1:
+    resolution: {integrity: sha512-kz+44DXrdhZUjN0RBULpkBad7WBAp9Wvcb/VoTDsZC0uvDGF4crCX9SHqi0r7lTVqfhrVK7H70bz1RKAmlHqTA==}
+    engines: {node: '>=18.0.0', npm: '>=7.0.0'}
+    peerDependencies:
+      svelte: ^5.0.0 || ^5.0.0-next.1
 
   svelte-check@4.1.3:
     resolution: {integrity: sha512-IEMoQDH+TrPKwKeIyJim+PU8FxnzQMXsFHR/ldErkHpPXEGHCujHUXiR8jg6qDMqzsif5BbDOUFORltu87ex7g==}
@@ -1850,6 +1874,8 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
+  open-props@1.7.10: {}
+
   optionator@0.9.4:
     dependencies:
       deep-is: 0.1.4
@@ -1878,6 +1904,11 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
+
+  postcss-jit-props@1.0.15(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      tiny-glob: 0.2.9
 
   postcss-load-config@3.1.4(postcss@8.4.49):
     dependencies:
@@ -1980,6 +2011,10 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  svelte-awesome-icons@2.0.1(svelte@5.17.3):
+    dependencies:
+      svelte: 5.17.3
 
   svelte-check@4.1.3(svelte@5.17.3)(typescript@5.7.3):
     dependencies:
