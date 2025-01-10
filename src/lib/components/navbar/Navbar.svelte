@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as Icon from 'svelte-awesome-icons';
     import { slide } from 'svelte/transition';
+    import { base } from '$app/paths';
 
     const links = [ 
         { 
@@ -25,7 +26,7 @@
 <nav>
     <div class="menu-wrapper">
         <div class="logo-container">
-            <a href="/" aria-label="logo btn">
+            <a href="{base}/" aria-label="logo btn">
                 <img src="./logo.png" alt="logo" class="logo"/>
             </a>
         </div>
@@ -35,7 +36,7 @@
             <ul>
                 {#each links as link}
                     <li>
-                        <a href={link.href} class="nav-link">{link.label}</a>
+                        <a href={base + "/" + link.href} class="nav-link">{link.label}</a>
                     </li>
                 {/each}
             </ul>
