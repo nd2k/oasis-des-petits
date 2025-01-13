@@ -3,16 +3,22 @@
 
 :root {
     font-family: "Noto Sans", "serif";
-    --beige-1: 41 66 89;
-    --beige-2: 35 51 84;
-    --dark-green-1: 187 60 25;
-    --dark-green-2: 187 0 20;
-    --dark-green-3: 168 40 80;
-    --green-3: 187 60 60;
-    --black-0: 0 0 0;
-    --white-0: 0 0 100;
+    --beige-1: 41, 66%, 89%;
+    --beige-2: 35, 51%, 84%;
+    --dark-green-1: 187, 60%, 25%;
+    --dark-green-2: 187, 0%, 20%;
+    --dark-green-3: 168, 40%, 80%;
+    --light-green-1: 150, 10%, 68%;
+    --green-3: 187, 60%, 60%;
+    --black-0: 0, 0%, 0%,;
+    --white-0: 0, 0%, 100%;
+    --white-1: 0, 15%, 80%, 0.5;
+    --orange-1: , 81%, 71%;
+    --pink-1: 8, 100%, 81%;
 
     --lighter-primary: 187 60 60;
     --tertiary: 74 100 84;
-    
+
+    --size-fluid-15: clamp(25rem, 35vw, 30rem);
+    --size-fluid-20: clamp(35rem, 50vw, 40rem);
 }

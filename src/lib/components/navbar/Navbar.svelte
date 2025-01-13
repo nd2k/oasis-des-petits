@@ -9,12 +9,24 @@
             href: "/"
         },
         {
+            label: "Le bain",
+            href: "#"
+        },
+        {
             label: "À propos",
             href: "#"
         },
         {
-            label: "Services",
+            label: "Formules",
             href: "#"
+        },
+        {
+            label: "Gallerie",
+            href: "#"
+        },
+        {
+            label: "Contact",
+            href:"#"
         }
     ]
 
@@ -27,7 +39,7 @@
     <div class="menu-wrapper">
         <div class="logo-container">
             <a href="{base}/" aria-label="logo btn">
-                <img src="./logo.png" alt="logo" class="logo"/>
+                <img src="./logo.webp" alt="Logo" class="logo"/>
             </a>
         </div>
         
@@ -109,6 +121,7 @@
             color: hsl(var(--dark-green-1));
             background-color: transparent;
             border: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         & .bar-menu:hover {
