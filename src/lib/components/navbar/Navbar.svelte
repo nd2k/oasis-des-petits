@@ -72,7 +72,8 @@
 
 <style>
     nav {
-        position: fixed;
+        position: sticky;
+        top: 0;
         width: 100%;
         box-shadow: var(--shadow-4);
         & .menu-wrapper {
