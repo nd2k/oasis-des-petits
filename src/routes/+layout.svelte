@@ -13,8 +13,8 @@
 <svelte:window bind:innerWidth={width} />
 <div class="top-header">
     <div class="name">
-        Laura Van Eeckoudt<br>
-        Baigneuse certifiée
+        Laura Van Eeckhoudt<br>
+        <small>Certifiée baigneuse « Bain des Merveilles »</small>
     </div>
     <div class="social-media">
         <div class="top-header-icons">
@@ -47,6 +47,9 @@
         padding: var(--size-fluid-1);
         & .name {
             font-size: var(--size-px-3);
+            & small {
+                font-size: var(--size-px-2);
+            }
         }
         & .social-media {
             & .top-header-icons {
