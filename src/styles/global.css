@@ -20,5 +20,6 @@
     --tertiary: 74 100 84;
 
     --size-fluid-15: clamp(25rem, 35vw, 30rem);
+    --size-fluid-18: clamp(30rem, 45vw, 35rem);
     --size-fluid-20: clamp(35rem, 50vw, 40rem);
 }

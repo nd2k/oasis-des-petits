@@ -21,7 +21,7 @@
             href: "#"
         },
         {
-            label: "Gallerie",
+            label: "Galerie",
             href: "#"
         },
         {
@@ -30,7 +30,7 @@
         }
     ]
 
-    export let isMobile: boolean;
+    export let isMobile: boolean = false;
     let isExpanded: boolean = false;
 
 </script>

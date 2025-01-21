@@ -2,15 +2,13 @@
     import '../styles/global.css';
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
     import * as Icon from 'svelte-awesome-icons';
+    import { state } from '$lib/state/state.svelte';
 
-    let width = $state(0);
-    let isMobile = $derived(width < 990);
-    let { children } = $props();
-    
+    let { children } = $props();    
 
 </script>
 
-<svelte:window bind:innerWidth={width} />
+<svelte:window bind:innerWidth={state.width} />
 <div class="top-header">
     <div class="name">
         Laura Van Eeckhoudt<br>
@@ -27,7 +25,7 @@
         </div>
     </div>
 </div>
-<Navbar isMobile={isMobile} />
+<Navbar isMobile={ state.width < 930}/>
 <div class="wrapper">
     <main>
         {@render children()}
@@ -71,6 +69,6 @@
     main {
         display: grid;
         gap: var(--size-fluid-10);
-        padding: var(--size-fluid-5) 0;
+        /* padding: var(--size-fluid-5) 0; */
     }
 </style>
