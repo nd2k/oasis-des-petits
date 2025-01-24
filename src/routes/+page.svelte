@@ -18,8 +18,6 @@
     .services {
         display: flex;
         flex-wrap: wrap;
-        position: relative;
-        z-index: 100;
     }
     h1 {
         font-size: var(--size-fluid-4);

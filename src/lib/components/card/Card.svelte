@@ -29,7 +29,7 @@
         padding: var(--size-fluid-2);
         width: var(--size-fluid-10);
         position: relative;
-        z-index: 100;
+        z-index: 10;
         background-color: hsl(var(--white-0));
         & .card-image {
             padding: var(--size-fluid-2);

@@ -73,6 +73,7 @@
 <style>
     nav {
         position: sticky;
+        z-index: 100;
         top: 0;
         width: 100%;
         box-shadow: var(--shadow-4);
