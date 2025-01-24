@@ -28,14 +28,14 @@
       position: absolute;
       top: 0;
       left: 0;
-      max-width: 100vw;
-      max-height: 100vh;
+      width: 100vw;
+      height: 100vh;
       z-index: -1; 
       pointer-events: none;
       .bubble {
         border-radius: 50%;
         box-shadow: var(--shadow-3);
-        }
+      }
     }
   </style>
   

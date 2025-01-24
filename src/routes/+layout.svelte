@@ -62,4 +62,8 @@
             }
         }
     }
+    .wrapper {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
 </style>
