@@ -3,8 +3,9 @@
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
     import * as Icon from 'svelte-awesome-icons';
     import { state } from '$lib/state/state.svelte';
+	import BubbleBackground from '$lib/components/background/BubbleBackground.svelte';
 
-    let { children } = $props();    
+    let { children } = $props();
 
 </script>
 
@@ -27,6 +28,7 @@
 </div>
 <Navbar isMobile={ state.width < 930}/>
 <div class="wrapper">
+    <BubbleBackground />
     <main>
         {@render children()}
     </main>
@@ -59,16 +61,5 @@
                 }
             }
         }
-    }
-    .wrapper {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        min-height: 100vh;
-    }
-
-    main {
-        display: grid;
-        gap: var(--size-fluid-10);
-        /* padding: var(--size-fluid-5) 0; */
     }
 </style>
