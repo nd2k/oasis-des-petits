@@ -32,6 +32,7 @@
       height: 100vh;
       z-index: -1; 
       pointer-events: none;
+      overflow-x: hidden;
       .bubble {
         border-radius: 50%;
         box-shadow: var(--shadow-3);
