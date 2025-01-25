@@ -1,9 +1,9 @@
 <script lang="ts">
     let bubbles = [
-        { size: 200, color: 'hsl(var(--pink-1))', left: '-10%', top: '55%' },
-        { size: 150, color: 'hsl(var(--dark-green-1))', left: '75%', top: '70%' },
-        { size: 300, color: 'hsl(var(--light-green-1))', left: '-20%', top: '125%' },
-        { size: 500, color: 'hsl(var(--beige-1))', left: '20%', top: '220%' },
+        { size: 200, color: 'hsl(var(--pink-1))', left: '-10%', top: '20%' },
+        { size: 150, color: 'hsl(var(--dark-green-1))', left: '75%', top: '23%' },
+        { size: 300, color: 'hsl(var(--light-green-1))', left: '50%', top: '48%' },
+        { size: 500, color: 'hsl(var(--beige-1))', left: '-20%', top: '70%' },
         ];
 </script>
 
@@ -28,8 +28,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       z-index: -1; 
       pointer-events: none;
       overflow-x: hidden;
