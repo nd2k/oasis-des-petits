@@ -1,9 +1,11 @@
 <script lang="ts">
     import '../styles/global.css';
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
+    import Field from '$lib/components/Field.svelte';
     import * as Icon from 'svelte-awesome-icons';
     import { state } from '$lib/state/state.svelte';
-	import BubbleBackground from '$lib/components/background/BubbleBackground.svelte';
+	import BubbleBackground from '$lib/components/BubbleBackground.svelte';
+	import Modal from '$lib/components/Modal.svelte';
 
     let { children } = $props();
 
@@ -27,6 +29,16 @@
     </div>
 </div>
 <Navbar isMobile={ state.width < 930}/>
+<Modal>
+    <div class="modal">
+        <p>Pour réserver votre formule préférée, veuillez remplir le formulaire de réservation ci-dessous.<br>
+        Je prendrai soin de vous recontacter pour fixer ensemble un rendez-vous</p>
+        <Field label="Nom" icon={Icon.IdCardSolid}/>
+        <Field label="Prénom" icon={Icon.IdCardSolid}/>
+        <Field label="Email" icon={Icon.EnvelopeSolid}/>
+        <Field label="Téléphone" icon={Icon.PhoneSolid}/>
+    </div>
+</Modal>
 <div class="wrapper">
     <BubbleBackground />
     <main>
@@ -61,6 +73,15 @@
                 }
             }
         }
+    }
+    .modal {
+       display: flex;
+       flex-direction: column;
+       gap: var(--size-fluid-2);
+       & p {
+        border-left: 2px solid hsl(var(--dark-green-1));
+        padding-left: var(--size-fluid-2);
+       }
     }
     .wrapper {
         height: 100%;

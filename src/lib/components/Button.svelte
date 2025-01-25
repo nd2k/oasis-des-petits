@@ -1,8 +1,8 @@
 <script lang="ts">
-    let { label = "button", variant = "accent-1" } = $props();
+    let { label = "button", variant = "accent-1", onclick } = $props();
 </script>
 
-<button class={variant}>
+<button class={variant} {onclick}>
     {label}
 </button>
 

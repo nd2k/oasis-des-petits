@@ -1,3 +1,4 @@
 export let state = $state({
-    width: 0
+    width: 0,
+    modalIsOpened: false
 });
