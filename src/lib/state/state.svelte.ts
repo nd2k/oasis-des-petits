@@ -1,4 +1,10 @@
 export let state = $state({
     width: 0,
-    modalIsOpened: false
+    modalIsOpened: false,
+    bookingFrom: {
+        firstName: '',
+        name: '',
+        email: '',
+        phone: ''
+    }
 });

@@ -6,8 +6,14 @@
     import { state } from '$lib/state/state.svelte';
 	import BubbleBackground from '$lib/components/BubbleBackground.svelte';
 	import Modal from '$lib/components/Modal.svelte';
+	import Button from '$lib/components/Button.svelte';
 
     let { children } = $props();
+
+    function submitData() {
+        console.log(state.bookingFrom);
+        
+    }
 
 </script>
 
@@ -33,10 +39,11 @@
     <div class="modal">
         <p>Pour réserver votre formule préférée, veuillez remplir le formulaire de réservation ci-dessous.<br>
         Je prendrai soin de vous recontacter pour fixer ensemble un rendez-vous</p>
-        <Field label="Nom" icon={Icon.IdCardSolid}/>
-        <Field label="Prénom" icon={Icon.IdCardSolid}/>
-        <Field label="Email" icon={Icon.EnvelopeSolid}/>
-        <Field label="Téléphone" icon={Icon.PhoneSolid}/>
+        <Field label="Nom" icon={Icon.IdCardSolid} bind:value={state.bookingFrom.firstName} />
+        <Field label="Prénom" icon={Icon.IdCardSolid} bind:value={state.bookingFrom.name} />
+        <Field label="Email" icon={Icon.EnvelopeSolid} bind:value={state.bookingFrom.email} />
+        <Field label="Téléphone" icon={Icon.PhoneSolid} bind:value={state.bookingFrom.phone} />
+        <Button onclick={submitData} />
     </div>
 </Modal>
 <div class="wrapper">
