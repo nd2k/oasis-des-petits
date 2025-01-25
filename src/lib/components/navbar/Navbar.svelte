@@ -139,6 +139,7 @@
             & a {
                 text-decoration: none;
                 color: hsl(var(--dark-green-1));
+                font-size: var(--size-5);
             }
             & a:hover {
                 color: hsl(var(--dark-green-2));

@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    font-family: "Noto Sans", "serif";
     --beige-1: 41, 66%, 89%;
     --beige-2: 35, 51%, 84%;
     --dark-green-1: 187, 60%, 25%;
@@ -14,7 +13,7 @@
     --white-0: 0, 0%, 100%;
     --white-1: 0, 15%, 80%, 0.5;
     --orange-1: , 81%, 71%;
-    --pink-1: 8, 100%, 81%;
+    --light-pink-1: 8, 100%, 81%;
 
     --lighter-primary: 187 60 60;
     --tertiary: 74 100 84;
@@ -22,4 +21,9 @@
     --size-fluid-15: clamp(25rem, 35vw, 30rem);
     --size-fluid-18: clamp(30rem, 45vw, 35rem);
     --size-fluid-20: clamp(35rem, 50vw, 40rem);
+}
+
+html,
+body {
+    font-family:  "Noto Sans", "serif";
 }

@@ -13,7 +13,7 @@
         <h2>{price}</h2>
     </div>
     <div class="card-footer">
-        <Button />
+        <Button label="Réservez"/>
     </div>
 </div>
 

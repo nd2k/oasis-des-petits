@@ -1,6 +1,5 @@
 <script lang="ts">
-    export let label = "button";
-    export let variant = "accent-1";
+    let { label = "button", variant = "accent-1" } = $props();
 </script>
 
 <button class={variant}>
@@ -13,11 +12,12 @@
         border-radius: var(--radius-2);
         border: none;
         height: var(--size-7);
-        padding: var(--size-3);
+        padding: var(--size-5);
         display: flex;
         justify-content: center;
         align-items: center;
         font-weight: 700;
+        cursor: pointer;
     }
     .accent-1 {
         background-color: hsl(var(--dark-green-1));
