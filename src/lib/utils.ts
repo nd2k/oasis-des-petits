@@ -41,7 +41,13 @@ function stringValidation(string: string, minChar: number, maxChar: number): boo
 }
 
 export function phoneValidation(phone: string) {
-    state.phoneValidationState = { validationState: ValidationState.VALID, errorMessage: '' };
+    let response = { validationState: ValidationState.NOTVALIDATED, errorMessage: '' };
+    if (phone.length > 0) {
+        state.phoneValidationState = { validationState: ValidationState.VALID, errorMessage: '' };
+    } else {
+        state.phoneValidationState = response;
+    }
+    
 }
 
 export function disabledButton(): boolean {

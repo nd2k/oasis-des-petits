@@ -4,6 +4,7 @@
         { size: 150, color: 'hsl(var(--dark-green-1))', left: '75%', top: '23%' },
         { size: 300, color: 'hsl(var(--light-green-1))', left: '50%', top: '48%' },
         { size: 200, color: 'hsl(var(--beige-1))', left: '-20%', top: '70%' },
+        { size: 400, color: 'hsl(var(--light-green-1))', left: '55%', top: '90%' },
         ];
 </script>
 

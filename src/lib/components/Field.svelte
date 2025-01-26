@@ -4,21 +4,30 @@
 
     let { value = $bindable(), ...props} = $props();
     let isEmpty = $state(true);
+    let isActive = $state(false);
+
+    function activeIcon() {
+        isActive = true;
+    }
+
+    function deactiveIcon() {
+        isActive = false;
+    }
 
     $effect(() => {        
-        isEmpty = value.length === 0 ? true : false;     
-        $inspect(props.validation)
+        isEmpty = value.length === 0 ? true : false;
+        if (!isEmpty) isActive
     })
 </script>
 
 <div class="field-input">
     {#if props.icon !== null}
-        <div class="icon">
+        <div class="icon" class:active={isActive}>
             <props.icon />
         </div>
     {/if}
     <div class="input-container">
-        <input id={props.id} type="text" bind:value={value} class={isEmpty ? 'empty' :  ''} onblur={props.onblur}/>
+        <input id={props.id} type="text" bind:value={value} class={isEmpty ? 'empty' :  ''} onblur={props.onblur} onfocus={activeIcon} onfocusout={deactiveIcon}/>
         <label for={props.id}>{props.label}</label>
         {#if props.validation.validationState === ValidationState.VALID}
             <div class="validation-icon">
@@ -42,18 +51,28 @@
         align-items: center;
         gap: var(--size-fluid-2);
         padding: var(--size-fluid-2) 0;
+        & .icon {
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+        & .active {
+            color: hsl(var(--light-pink-1));
+        }
         & .input-container {
             position: relative;
             flex: 1;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: nowrap;
             gap: var(--size-fluid-2);
             & input {
                 border: none;
                 outline: none;
                 flex: 1;
+                font-size: var(--size-fluid-3);
             }
             & input:focus {
                 border-bottom: 1px solid hsl(var(--light-pink-1));
@@ -66,6 +85,7 @@
                 font-size: 1rem;
                 transition: all 0.2s ease;
                 pointer-events: none;
+                font-size: var(--size-fluid-3);
             }
             & input:focus +label,
             input:not(.empty) +label {

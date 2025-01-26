@@ -64,9 +64,10 @@
         border: none;
         font-size: 1.5rem;
         position: absolute; 
-        top: 3%;
-        right: 3%;
+        top: 1%;
+        right: 1%;
         cursor: pointer;
+        color: hsl(var(--dark-green-1));
         }
     }
   

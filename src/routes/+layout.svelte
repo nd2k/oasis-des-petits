@@ -88,6 +88,7 @@
        & p {
         border-left: 2px solid hsl(var(--dark-green-1));
         padding-left: var(--size-fluid-2);
+        font-size: var(--size-fluid-3);
        }
     }
     .wrapper {
