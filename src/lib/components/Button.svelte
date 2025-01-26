@@ -1,10 +1,18 @@
 <script lang="ts">
-    let { label = "button", variant = "accent-1", onclick, disabled = false } = $props();
+	import { ButtonType } from "$lib/interface";
+
+    let { label = "button", variant = "accent-1", onclick = null, disabled = false, type=ButtonType.BUTTON } = $props();
 </script>
 
-<button class={variant} {onclick} {disabled}>
-    {label}
-</button>
+{#if onclick}
+    <button class={variant} {onclick} {disabled} {type}>
+        {label}
+    </button>
+{:else}
+    <button class={variant} {onclick} {disabled} {type}>
+        {label}
+    </button>
+{/if}
 
 <style>
     button {

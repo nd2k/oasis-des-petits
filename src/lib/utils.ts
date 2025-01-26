@@ -47,12 +47,11 @@ export function phoneValidation(phone: string) {
     } else {
         state.phoneValidationState = response;
     }
-    
 }
 
 export function disabledButton(): boolean {
     return !(state.nameValidationState.validationState === ValidationState.VALID &&
         state.firstNameValidationState.validationState === ValidationState.VALID &&
         state.emailValidationState.validationState === ValidationState.VALID &&
-        state.phoneValidationState.validationState === ValidationState.VALID);
+        state.phoneValidationState.validationState === ValidationState.VALID) && state.bookingForm.hp.length === 0;
 }

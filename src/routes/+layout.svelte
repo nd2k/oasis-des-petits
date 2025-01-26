@@ -8,8 +8,13 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { disabledButton, emailValidation, firstNameValidation, nameValidation, phoneValidation } from '$lib/utils';
+	import { ButtonType } from '$lib/interface';
 
     let { children } = $props();
+
+    $effect(() => {
+        $inspect(state)
+    })
 
     function submitData() {
        console.log(state.bookingForm)
@@ -39,11 +44,14 @@
     <div class="modal">
         <p>Pour réserver votre formule préférée, veuillez remplir le formulaire de réservation ci-dessous.<br>
         Je prendrai soin de vous recontacter pour fixer ensemble un rendez-vous</p>
-        <Field label="Nom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.name} onblur={() => nameValidation(state.bookingForm.name)} validation={state.nameValidationState} />
-        <Field label="Prénom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.firstName} onblur={() => firstNameValidation(state.bookingForm.firstName)} validation={state.firstNameValidationState} />
-        <Field label="Email" icon={Icon.EnvelopeSolid} bind:value={state.bookingForm.email} onblur={() => emailValidation(state.bookingForm.email)} validation={state.emailValidationState}/>
-        <Field label="Téléphone" icon={Icon.PhoneSolid} bind:value={state.bookingForm.phone} onblur={() => phoneValidation(state.bookingForm.phone)} validation={state.phoneValidationState} />
-        <Button onclick={submitData} disabled={disabledButton()} />
+        <form method="POST" action="/">
+            <Field id="name" label="Nom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.name} onblur={() => nameValidation(state.bookingForm.name)} validation={state.nameValidationState} />
+            <Field id="firstName" label="Prénom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.firstName} onblur={() => firstNameValidation(state.bookingForm.firstName)} validation={state.firstNameValidationState} />
+            <Field id="email" label="Email" icon={Icon.EnvelopeSolid} bind:value={state.bookingForm.email} onblur={() => emailValidation(state.bookingForm.email)} validation={state.emailValidationState}/>
+            <Field id="phone" label="Téléphone" icon={Icon.PhoneSolid} bind:value={state.bookingForm.phone} onblur={() => phoneValidation(state.bookingForm.phone)} validation={state.phoneValidationState} />
+            <Field id="hp" label="hp" bind:value={state.bookingForm.hp} invisible={true}/>
+            <Button disabled={disabledButton()} type={ButtonType.SUBMIT} />
+        </form>
     </div>
 </Modal>
 <div class="wrapper">
@@ -82,9 +90,11 @@
         }
     }
     .modal {
-       display: flex;
-       flex-direction: column;
-       gap: var(--size-fluid-2);
+       form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-fluid-2);
+       }
        & p {
         border-left: 2px solid hsl(var(--dark-green-1));
         padding-left: var(--size-fluid-2);

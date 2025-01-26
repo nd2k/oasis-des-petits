@@ -2,9 +2,7 @@
     import * as Icon from 'svelte-awesome-icons';
     import { ValidationState } from '$lib/interface';
 
-    let { value = $bindable(), ...props} = $props();
-    // let isEmpty = $state(true);
-    // let isActive = $state(false);
+    let { value = $bindable(), validation = null, invisible = false, ...props} = $props();
     let fieldState = $state({
         isFocus: false,
         isEmpty: true
@@ -20,15 +18,9 @@
         fieldState.isFocus = value.length === 0 ? false : true;
     }
 
-    // $effect(() => {        
-    //     isEmpty = value.length === 0 ? true : false;
-    //     if (!isEmpty) {
-    //         isActive = true;
-    //     }
-    // })
 </script>
 
-<div class="field-input">
+<div class="field-input" class:invisible={invisible}>
     {#if props.icon !== null}
         <div class="icon" class:active={fieldState.isFocus}>
             <props.icon />
@@ -37,14 +29,14 @@
     <div class="input-container">
         <input id={props.id} type="text" bind:value={value} class={fieldState.isEmpty ? 'empty' :  ''} onblur={props.onblur} onfocus={onFocus} onfocusout={outFocus}/>
         <label for={props.id}>{props.label}</label>
-        {#if props.validation.validationState === ValidationState.VALID}
+        {#if validation !== null && validation.validationState === ValidationState.VALID}
             <div class="validation-icon">
                 <Icon.CircleCheckSolid />
             </div>
         {/if}
     </div>
 </div>
-{#if props.validation.validationState === ValidationState.INVALID}
+{#if validation !== null && validation.validationState === ValidationState.INVALID}
     <div class="error-container">
         <Icon.CircleXmarkSolid />
         {props.validation.errorMessage}
@@ -106,6 +98,9 @@
                 color: var(--green-9);
             }
         }
+    }
+    .invisible {
+        display: none;
     }
     .error-container {
         display: flex;

@@ -3,3 +3,9 @@ export enum ValidationState {
     INVALID,
     NOTVALIDATED
 }
+
+export enum ButtonType {
+    BUTTON = "button",
+    SUBMIT = "submit",
+    RESET = "reset"
+}
