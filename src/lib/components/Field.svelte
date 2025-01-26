@@ -73,6 +73,8 @@
                 outline: none;
                 flex: 1;
                 font-size: var(--size-fluid-3);
+                border-radius: 0;
+                width: 80%;
             }
             & input:focus {
                 border-bottom: 1px solid hsl(var(--light-pink-1));
