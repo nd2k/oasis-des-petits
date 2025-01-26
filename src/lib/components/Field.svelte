@@ -3,31 +3,39 @@
     import { ValidationState } from '$lib/interface';
 
     let { value = $bindable(), ...props} = $props();
-    let isEmpty = $state(true);
-    let isActive = $state(false);
-
-    function activeIcon() {
-        isActive = true;
-    }
-
-    function deactiveIcon() {
-        isActive = false;
-    }
-
-    $effect(() => {        
-        isEmpty = value.length === 0 ? true : false;
-        if (!isEmpty) isActive
+    // let isEmpty = $state(true);
+    // let isActive = $state(false);
+    let fieldState = $state({
+        isFocus: false,
+        isEmpty: true
     })
+
+    function onFocus() {
+        fieldState.isEmpty = value.length === 0 ? true : false;
+        fieldState.isFocus = true;
+    }
+
+    function outFocus() {
+        fieldState.isEmpty = value.length === 0 ? true : false;
+        fieldState.isFocus = value.length === 0 ? false : true;
+    }
+
+    // $effect(() => {        
+    //     isEmpty = value.length === 0 ? true : false;
+    //     if (!isEmpty) {
+    //         isActive = true;
+    //     }
+    // })
 </script>
 
 <div class="field-input">
     {#if props.icon !== null}
-        <div class="icon" class:active={isActive}>
+        <div class="icon" class:active={fieldState.isFocus}>
             <props.icon />
         </div>
     {/if}
     <div class="input-container">
-        <input id={props.id} type="text" bind:value={value} class={isEmpty ? 'empty' :  ''} onblur={props.onblur} onfocus={activeIcon} onfocusout={deactiveIcon}/>
+        <input id={props.id} type="text" bind:value={value} class={fieldState.isEmpty ? 'empty' :  ''} onblur={props.onblur} onfocus={onFocus} onfocusout={outFocus}/>
         <label for={props.id}>{props.label}</label>
         {#if props.validation.validationState === ValidationState.VALID}
             <div class="validation-icon">
@@ -81,9 +89,9 @@
             }
             & label {
                 position: absolute;
-                top: 100%;
+                top: 80%;
                 left: 0;
-                transform: translateY(-100%);
+                transform: translateY(-90%);
                 font-size: 1rem;
                 transition: all 0.2s ease;
                 pointer-events: none;

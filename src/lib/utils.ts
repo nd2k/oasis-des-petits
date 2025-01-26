@@ -51,11 +51,6 @@ export function phoneValidation(phone: string) {
 }
 
 export function disabledButton(): boolean {
-    console.log(state.nameValidationState.validationState !== ValidationState.VALID &&
-        state.firstNameValidationState.validationState !== ValidationState.VALID &&
-        state.emailValidationState.validationState !== ValidationState.VALID &&
-        state.phoneValidationState.validationState !== ValidationState.VALID);
-    
     return !(state.nameValidationState.validationState === ValidationState.VALID &&
         state.firstNameValidationState.validationState === ValidationState.VALID &&
         state.emailValidationState.validationState === ValidationState.VALID &&
