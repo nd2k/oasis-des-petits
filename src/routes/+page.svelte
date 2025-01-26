@@ -2,7 +2,7 @@
     import Hero from '$lib/components/Hero.svelte';
     import Card from '$lib/components/Card.svelte';
     import Button from '$lib/components/Button.svelte';
-    import { state } from '$lib/state/state.svelte';
+    import { state } from '$lib/state.svelte';
 
     function openModal() {
         state.modalIsOpened = true;
@@ -21,7 +21,7 @@
             <h2>100€</h2>
         </div>
         <div class="card-footer">
-            <Button onclick={openModal} />
+            <Button label="Reservez" onclick={openModal} />
         </div>
     </Card>
     <Card>
@@ -31,7 +31,7 @@
             <h2>120€</h2>
         </div>
         <div class="card-footer">
-            <Button onclick={openModal} />
+            <Button label="Reservez" onclick={openModal} />
         </div>
     </Card>
     <Card>
@@ -41,7 +41,7 @@
             <h2>270€</h2>
         </div>
         <div class="card-footer">
-            <Button onclick={openModal} />
+            <Button label="Reservez" onclick={openModal} />
         </div>
     </Card>
 </section>

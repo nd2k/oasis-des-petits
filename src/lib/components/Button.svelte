@@ -1,8 +1,8 @@
 <script lang="ts">
-    let { label = "button", variant = "accent-1", onclick } = $props();
+    let { label = "button", variant = "accent-1", onclick, disabled = false } = $props();
 </script>
 
-<button class={variant} {onclick}>
+<button class={variant} {onclick} {disabled}>
     {label}
 </button>
 
@@ -34,5 +34,10 @@
     .accent-3 {
         background-color: hsl(var(--beige-2));
         color: hsl(var(--black-0));
+    }
+    button:disabled {
+        background-color: dimgrey;
+        color: linen;
+        opacity: 1;
     }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { state } from '$lib/state/state.svelte';
+    import { state } from '$lib/state.svelte';
 </script>
 
 {#if state.width < 930}

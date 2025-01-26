@@ -1,6 +1,7 @@
 <script lang="ts">  
+    import * as Icon from 'svelte-awesome-icons';
     let {children} = $props();
-    import { state } from '$lib/state/state.svelte';
+    import { state } from '$lib/state.svelte';
   
     function closeModal(): void {
       state.modalIsOpened = false;
@@ -29,7 +30,7 @@
   {#if state.modalIsOpened}
     <div class="modal-overlay" onclick={handleOutsideClick} role="button" tabindex="-1" onkeydown={handleKeyAction}>
       <div class="modal-content">
-        <button class="close-button" onclick={closeModal} onkeydown={closeKeyAction}>✖</button>
+        <button class="close-button" onclick={closeModal} onkeydown={closeKeyAction}><Icon.CircleXmarkSolid /></button>
         {@render children()}
       </div>
     </div>
@@ -56,17 +57,20 @@
       box-shadow: var(--shadow-3);
       width: 80%;
       animation: fadeIn 0.3s ease-out;
+      position: relative;
+
+      & .close-button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        position: absolute; 
+        top: 3%;
+        right: 3%;
+        cursor: pointer;
+        }
     }
   
-    .close-button {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
+    
   
     @keyframes fadeIn {
       from {

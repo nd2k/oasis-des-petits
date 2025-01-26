@@ -1,9 +1,13 @@
 <script lang="ts">
+    import * as Icon from 'svelte-awesome-icons';
+    import { ValidationState } from '$lib/interface';
+
     let { value = $bindable(), ...props} = $props();
     let isEmpty = $state(true);
 
     $effect(() => {        
-        isEmpty = value.length === 0 ? true : false;
+        isEmpty = value.length === 0 ? true : false;     
+        $inspect(props.validation)
     })
 </script>
 
@@ -14,10 +18,21 @@
         </div>
     {/if}
     <div class="input-container">
-        <input id={props.id} type="text" bind:value={value} class={isEmpty ? 'empty' :  ''}/>
+        <input id={props.id} type="text" bind:value={value} class={isEmpty ? 'empty' :  ''} onblur={props.onblur}/>
         <label for={props.id}>{props.label}</label>
+        {#if props.validation.validationState === ValidationState.VALID}
+            <div class="validation-icon">
+                <Icon.CircleCheckSolid />
+            </div>
+        {/if}
     </div>
 </div>
+{#if props.validation.validationState === ValidationState.INVALID}
+    <div class="error-container">
+        <Icon.CircleXmarkSolid />
+        {props.validation.errorMessage}
+    </div>
+{/if}
 
 
 <style>
@@ -31,10 +46,14 @@
             position: relative;
             flex: 1;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: var(--size-fluid-2);
             & input {
                 border: none;
                 outline: none;
+                flex: 1;
             }
             & input:focus {
                 border-bottom: 1px solid hsl(var(--light-pink-1));
@@ -49,10 +68,22 @@
                 pointer-events: none;
             }
             & input:focus +label,
-            input:not(.empty) +label{
+            input:not(.empty) +label {
                 color: hsl(var(--light-pink-1));
                 top: 0;
             }
+            & .validation-icon {
+                color: var(--green-9);
+            }
         }
+    }
+    .error-container {
+        display: flex;
+        align-items: center;
+        gap: var(--size-fluid-2);
+        font-size: var(--size-fluid-2);
+        color: var(--red-9);
+        padding: 0;
+        margin-left: var(--size-fluid-4);
     }
 </style>
