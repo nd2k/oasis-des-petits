@@ -15,6 +15,12 @@
         state.isNavExpanded = false;
     }
 
+    function handleKeyAction(event: KeyboardEvent): void {
+        if (event.key === 'Space') {
+            state.modalIsOpened = true;
+        }
+    }
+
 </script>
 
 <svelte:window bind:innerWidth={state.width} />
@@ -35,7 +41,7 @@
     </div>
 </div>
 <Navbar isMobile={ state.width < 930}/>
-<div class="wrapper" onclick={closeNavbar}>
+<div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>
     <BubbleBackground />
     <main>
         {@render children()}
