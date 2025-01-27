@@ -55,7 +55,7 @@
             background-size: 100% 100%;
             height: var(--size-fluid-18);
             & .keywords {
-                animation: fadeIn 2s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+                animation: fadeIn 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
                 transform-origin: center;
             }
             & .keyword {

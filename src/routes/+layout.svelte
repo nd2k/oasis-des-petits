@@ -11,6 +11,10 @@
         $inspect(state)
     })
 
+    function closeNavbar() {
+        state.isNavExpanded = false;
+    }
+
 </script>
 
 <svelte:window bind:innerWidth={state.width} />
@@ -31,7 +35,7 @@
     </div>
 </div>
 <Navbar isMobile={ state.width < 930}/>
-<div class="wrapper">
+<div class="wrapper" onclick={closeNavbar}>
     <BubbleBackground />
     <main>
         {@render children()}

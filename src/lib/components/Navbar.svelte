@@ -2,6 +2,7 @@
     import * as Icon from 'svelte-awesome-icons';
     import { slide } from 'svelte/transition';
     import { base } from '$app/paths';
+    import { state } from '$lib/state.svelte';
 
     const links = [ 
         { 
@@ -32,7 +33,6 @@
     ]
 
     export let isMobile: boolean = false;
-    let isExpanded: boolean = false;
 
 </script>
 
@@ -54,13 +54,13 @@
                 {/each}
             </ul>
             {:else}
-                <button class="bar-menu" onclick={() => isExpanded = !isExpanded}>
+                <button class="bar-menu" onclick={() => state.isNavExpanded = !state.isNavExpanded}>
                     <Icon.BarsSolid />
                 </button>
             {/if}
         </div>
     </div>
-    {#if isMobile && isExpanded}
+    {#if isMobile && state.isNavExpanded}
     <ul class="menu-container mobile" transition:slide={{ duration: 300 }}>
         {#each links as link }
             <li>

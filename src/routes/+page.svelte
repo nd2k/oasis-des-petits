@@ -32,8 +32,8 @@
 
 <Hero />
 
-<section class="services">
-    <h1>Nos Formules</h1>
+<section class="formules">
+    <h1 class="title-h1">Nos Formules</h1>
     <Card>
         <div class="card-body">
             <div class="title">Formule bain</div>
@@ -67,7 +67,7 @@
 </section>
 
 <section class="bath section">
-    <h1>Le bain</h1>
+    <h1 class="title-h1">Le bain</h1>
     <div class="section-content">
         <p>La séance commence par un moment d’échange avec vous. Cet entretien permet d’exprimer vos ressentis autour de la grossesse et 
             de l’accouchement, dans un cadre bienveillant et à l’écoute. Ce moment est essentiel pour instaurer un climat de confiance 
@@ -84,15 +84,15 @@
 </section>
 
 <section class="about section">
-    <h1>À propos</h1>
+    <h1 class="title-h1">À propos</h1>
     <div class="section-content">
         <p>Laura Van Eeckhoudt - Certifiée baigneuse « bain des Merveilles »</p>
-        <h2>Mon parcours</h2>
+        <h2 class="title-h2">Mon parcours</h2>
         <p>Après avoir obtenu mon diplôme d’infirmière spécialisée  en pédiatrie et néonatalogie, j’ai commencé à travailler dans un centre néonatal à Bruxelles où j’exerce encore actuellement.</p>
         <p>J’ai toujours eu une certaine sensibilité au bien être du nouveau né et à prendre soin des plus petits.</p>
         <p>Avec une grande envie de développer mes compétences, j’ai eu la chance de me former au Bain des Merveilles a Bordeaux par 
             la talentueuse infirmière puéricultrice Aurélien Cachen.</p>
-        <h2>Mon approche</h2>
+        <h2 class="title-h2">Mon approche</h2>
         <p>Dans mon quotidien auprès des nouveaux nés prématurés, je leur propose des soins individualisés en respectant leur physiologie, c’est à dire en leur offrant des sensations proches de celles vécues in utéro dans le but de leur apporter une certaine sécurité.</p> 
         <p>Dans cette discipline de bain emmailloté, l’approche est assez similaire car au cours de ce bain, je permet au bébé de retrouver des sensations semblables à celles qui l’avait dans le ventre de sa maman.</p> 
         <p>De plus au cours de ce moment intime entre le bébé et ses parents, ce bain a pour vertu de renforcer les liens d’attachement et de recréer le cocon intra-utérin.</p>
@@ -113,13 +113,13 @@
         font-size: var(--size-fluid-3);
        }
     }
-    h1 {
+    .title-h1 {
         font-size: var(--size-fluid-4);
         padding: var(--size-fluid-4);
         color: hsl(var(--dark-green-1));
         display: inline-block;
     }
-    h1::after {
+    .title-h1::after {
         content: "";
         display: block;
         width: 75%;
@@ -127,13 +127,13 @@
         background-color: hsl(var(--dark-green-1));
         margin-top: var(--size-fluid-2);
     }
-    h2 {
+    .title-h2 {
         font-size: var(--size-fluid-3);
         padding: var(--size-fluid-2) 0;
         color: hsl(var(--light-green-1));
         display: inline-block;
     }
-    h2::after {
+    .title-h2::after {
         content: "";
         display: block;
         width: 75%;
@@ -141,7 +141,7 @@
         background-color: hsl(var(--light-green-1));
         margin-top: var(--size-fluid-2);
     }
-    .services {
+    .formules {
         display: flex;
         flex-wrap: wrap;
     & .card-body {

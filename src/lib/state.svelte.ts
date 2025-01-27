@@ -2,6 +2,7 @@ import { ValidationState } from "./interface";
 
 export let state = $state({
     width: 0,
+    isNavExpanded: false,
     modalIsOpened: false,
     bookingForm: {
         firstName: '',
