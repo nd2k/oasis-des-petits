@@ -1,6 +1,6 @@
 <script lang="ts">
     let bubbles = [
-        { size: 200, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '20%' },
+        { size: 200, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '18%' },
         { size: 150, color: 'hsl(var(--dark-green-1))', left: '75%', top: '23%' },
         { size: 300, color: 'hsl(var(--light-green-1))', left: '50%', top: '48%' },
         { size: 200, color: 'hsl(var(--beige-1))', left: '-20%', top: '70%' },

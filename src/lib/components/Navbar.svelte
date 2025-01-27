@@ -9,6 +9,10 @@
             href: "/"
         },
         {
+            label: "Formules",
+            href: "#"
+        },
+        {
             label: "Le bain",
             href: "#"
         },
@@ -16,10 +20,7 @@
             label: "À propos",
             href: "#"
         },
-        {
-            label: "Formules",
-            href: "#"
-        },
+        
         {
             label: "Galerie",
             href: "#"

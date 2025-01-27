@@ -1,5 +1,5 @@
 <script lang="ts">
-    let {image = "./serviette.webp", children} = $props();
+    let {image = "./serviette_2.webp", children} = $props();
 </script>
 
 <div class="card">
