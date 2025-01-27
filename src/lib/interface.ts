@@ -9,3 +9,13 @@ export enum ButtonType {
     SUBMIT = "submit",
     RESET = "reset"
 }
+
+export type EmailMessage = {
+    from: string,
+    to: string,
+    subject: string,
+    html: string,
+    attachments: [{
+        
+    }]
+}

@@ -27,7 +27,7 @@
         </div>
     {/if}
     <div class="input-container">
-        <input id={props.id} type="text" bind:value={value} class={fieldState.isEmpty ? 'empty' :  ''} onblur={props.onblur} onfocus={onFocus} onfocusout={outFocus}/>
+        <input id={props.id} name={props.id} type="text" bind:value={value} class={fieldState.isEmpty ? 'empty' :  ''} onblur={props.onblur} oninput={onFocus} onfocus={onFocus} onfocusout={outFocus}/>
         <label for={props.id}>{props.label}</label>
         {#if validation !== null && validation.validationState === ValidationState.VALID}
             <div class="validation-icon">

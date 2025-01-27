@@ -1,5 +1,5 @@
 import { ValidationState } from './interface';
-import { state } from '$lib/state.svelte'
+import { state } from '$lib/state.svelte';
 
 export function emailValidation(email: string): void {
     let response = { validationState: ValidationState.NOTVALIDATED, errorMessage: '' };
@@ -17,9 +17,9 @@ export function emailValidation(email: string): void {
 export function firstNameValidation(firstName: string) {
     let response = { validationState: ValidationState.NOTVALIDATED, errorMessage: '' };
     if (firstName.length > 0) {
-        state.firstNameValidationState = stringValidation(firstName, 4, 100) ?
+        state.firstNameValidationState = stringValidation(firstName, 2, 100) ?
             { validationState: ValidationState.VALID, errorMessage: '' } : 
-            { validationState: ValidationState.INVALID, errorMessage: "Le prénom doit être compris entre 4 et 100 caractères" };
+            { validationState: ValidationState.INVALID, errorMessage: "Le prénom doit être compris entre 2 et 100 caractères" };
     } else {
         state.firstNameValidationState = response;
     }
@@ -28,9 +28,9 @@ export function firstNameValidation(firstName: string) {
 export function nameValidation(name: string) {
     let response = { validationState: ValidationState.NOTVALIDATED, errorMessage: '' };
     if (name.length > 0) {
-        state.nameValidationState = stringValidation(name, 4, 100) ?
+        state.nameValidationState = stringValidation(name, 2, 100) ?
             { validationState: ValidationState.VALID, errorMessage: '' } : 
-            { validationState: ValidationState.INVALID, errorMessage: "Le nom doit être compris entre 4 et 100 caractères" };
+            { validationState: ValidationState.INVALID, errorMessage: "Le nom doit être compris entre 2 et 100 caractères" };
     } else {
         state.nameValidationState = response;
     }

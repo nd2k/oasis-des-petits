@@ -9,7 +9,8 @@ export let state = $state({
         name: '',
         email: '',
         phone: '',
-        hp: ''
+        hp: '',
+        message: ''
     },
     emailValidationState: {
         validationState: ValidationState.NOTVALIDATED,
