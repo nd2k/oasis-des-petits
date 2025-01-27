@@ -31,6 +31,8 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          GOOGLE_MAIL: '/${{ secrets.GOOGLE_MAIL}}'
+          GOOGLE_PASSWORD: '/${{ secrets.GOOGLE_PASSWORD}}'
         run: |
           pnpm run build
       - name: Upload Artifacts
