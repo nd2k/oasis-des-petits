@@ -88,8 +88,8 @@ export const actions = {
 				attachments: [
 					{
 					  filename: "logo.png",
-					  path: "static/logo.png", // Chemin local à ton projet
-					  cid: "logo", // Identifiant unique pour l'image
+					  path: "static/logo.png",
+					  cid: "logo",
 					},
 				  ],
 			};
