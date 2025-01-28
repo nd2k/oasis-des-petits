@@ -1,4 +1,4 @@
-import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
+import { variables } from './variables';
 import nodemailer from 'nodemailer';
 
 let transporter = nodemailer.createTransport({
@@ -6,8 +6,8 @@ let transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-        user: GOOGLE_EMAIL,
-        pass: GOOGLE_PASSWORD,
+        user: variables.googleEmail,
+        pass: variables.googlePassword
     },
 });
 

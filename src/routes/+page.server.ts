@@ -1,6 +1,5 @@
 import type { Actions } from './$types';
 import transporter from '$lib/emailSetup';
-import { GOOGLE_EMAIL } from '$env/static/private';
 import type { EmailMessage } from '$lib/interface';
 
 export const actions = {
@@ -83,7 +82,7 @@ export const actions = {
 			
 			const message: EmailMessage = {
 				from: 'infos@oasis-des-petits.be',
-				to: GOOGLE_EMAIL,
+				to: 'nicolas.decat@gmail.com',
 				subject: 'Demande de renseignements',
 				html: html,
 				attachments: [
