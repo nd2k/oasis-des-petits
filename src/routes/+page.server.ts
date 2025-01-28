@@ -1,5 +1,5 @@
 import type { Actions } from './$types';
-import transporter from '$lib/emailSetup';
+import transporter from './emailSetup';
 import type { EmailMessage } from '$lib/interface';
 
 export const actions = {
