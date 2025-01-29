@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer';
 import type { EmailMessage } from '$lib/interface';
 import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
 
+export const prerender = false;
+
 let transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
 	port: 465,
