@@ -4,8 +4,10 @@ import type { EmailMessage } from '$lib/interface';
 import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
 
 export const config = {
-    runtime: 'edge' // Exécuter en mode Serverless sur Vercel
-};
+	isr: {
+		expiration: 60
+	}
+}
 
 let transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
