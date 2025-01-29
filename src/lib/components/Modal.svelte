@@ -27,14 +27,13 @@
     }
   </script>
   
-  {#if state.modalIsOpened}
     <div class="modal-overlay" onclick={handleOutsideClick} role="button" tabindex="-1" onkeydown={handleKeyAction}>
       <div class="modal-content">
         <button class="close-button" onclick={closeModal} onkeydown={closeKeyAction}><Icon.CircleXmarkSolid /></button>
         {@render children()}
       </div>
     </div>
-  {/if}
+
   
   <style>
     .modal-overlay {
