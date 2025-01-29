@@ -7,10 +7,6 @@
 
     let { children } = $props();
 
-    $effect(() => {
-        $inspect(state)
-    })
-
     function closeNavbar() {
         state.isNavExpanded = false;
     }
