@@ -1,9 +1,31 @@
 import type { Actions } from './$types';
-import transporter from './emailSetup';
+import nodemailer from 'nodemailer';
 import type { EmailMessage } from '$lib/interface';
+import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
+
+let transporter = nodemailer.createTransport({
+	host: 'smtp.gmail.com',
+	port: 587,
+	secure: false,
+	auth: {
+		user: GOOGLE_EMAIL,
+		pass: GOOGLE_PASSWORD
+	},
+});
+
+transporter.verify(function(error, success) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log('Server is ready to send your messages');
+		
+	}
+});
 
 export const actions = {
 	default: async ({ request }) => {
+		console.log('trigger sending email...');
+		
 		try {
 			const formData = await request.formData();
 			const name = formData.get('name');
@@ -11,6 +33,7 @@ export const actions = {
 			const email = formData.get('email');
 			const phone = formData.get('phone');
 			const textarea = formData.get('request');
+			
 			const html = `
 			<!DOCTYPE html>
 			<html lang="fr">
