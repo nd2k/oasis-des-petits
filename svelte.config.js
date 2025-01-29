@@ -10,15 +10,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
-		paths: {
-			base: dev ? '' : process.env.BASE_PATH
-		},
-		env: {
-			dir: './'
-		}
+		adapter: adapter()
 	}
 };
 
