@@ -14,6 +14,10 @@
     function openModal() {
         state.modalIsOpened = true;
     }
+
+    function closeModal() {
+        state.modalIsOpened = false;
+    }
     
 </script>
 
@@ -28,7 +32,7 @@
             <Field id="phone" label="Téléphone" icon={Icon.PhoneSolid} bind:value={state.bookingForm.phone} onblur={() => phoneValidation(state.bookingForm.phone)} validation={state.phoneValidationState} />
             <Field id="hp" label="hp" bind:value={state.bookingForm.hp} invisible={true}/>
             <Textarea id="request" label="Posez votre question" icon={Icon.CircleQuestionSolid} bind:value={state.bookingForm.message}/>
-            <Button disabled={disabledButton()} type={ButtonType.SUBMIT} />
+            <Button disabled={disabledButton()} type={ButtonType.SUBMIT} onclick={closeModal}/>
         </form>
     </div>
 </Modal>
