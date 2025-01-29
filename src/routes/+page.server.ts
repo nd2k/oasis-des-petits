@@ -89,6 +89,7 @@ export const actions = {
 			<body>
 				<div class="email-container">
 					<div class="header">
+						<img src="cid:logo" alt="Logo" style="max-width: 150px;" />
 						<h2>Nouvelle demande de renseignement</h2>
 					</div>
 					<div class="content">
@@ -106,13 +107,13 @@ export const actions = {
 				to: 'nicolas.decat@gmail.com',
 				subject: 'Demande de renseignements',
 				html: html,
-				// attachments: [
-				// 	{
-				// 	  filename: "logo.png",
-				// 	  path: "static/logo.png",
-				// 	  cid: "logo",
-				// 	},
-				//   ],
+				attachments: [
+					{
+					  filename: "logo.png",
+					  path: "static/logo.webp",
+					  cid: "logo",
+					},
+				  ],
 			};
 			console.log(message);
 			const sendEmail = async (message: EmailMessage) => {
