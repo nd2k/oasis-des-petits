@@ -15,8 +15,13 @@
         state.modalIsOpened = true;
     }
 
-    function closeModal() {
+    function handleSubmit() {
         state.modalIsOpened = false;
+        return async({ update, result }) => {
+            await update();
+            console.log(result);
+            
+        }
     }
     
 </script>
@@ -25,7 +30,7 @@
     <div class="modal">
         <p>Pour réserver votre formule préférée, veuillez remplir le formulaire de réservation ci-dessous.<br>
         Je prendrai soin de vous recontacter pour fixer ensemble un rendez-vous</p>
-        <form method="POST">
+        <form method="POST" use:enhance={handleSubmit}>
             <Field id="name" label="Nom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.name} onblur={() => nameValidation(state.bookingForm.name)} validation={state.nameValidationState} />
             <Field id="firstName" label="Prénom" icon={Icon.IdCardSolid} bind:value={state.bookingForm.firstName} onblur={() => firstNameValidation(state.bookingForm.firstName)} validation={state.firstNameValidationState} />
             <Field id="email" label="Email" icon={Icon.EnvelopeSolid} bind:value={state.bookingForm.email} onblur={() => emailValidation(state.bookingForm.email)} validation={state.emailValidationState}/>
