@@ -21,11 +21,11 @@
 </script>
 
 <div class="field-input" class:invisible={invisible}>
-    {#if props.icon !== null}
+    <!-- {#if props.icon !== null}
         <div class="icon" class:active={fieldState.isFocus}>
             <props.icon />
         </div>
-    {/if}
+    {/if} -->
     <div class="input-container">
         <input id={props.id} name={props.id} type="text" bind:value={value} class={fieldState.isEmpty ? 'empty' :  ''} onblur={props.onblur} oninput={onFocus} onfocus={onFocus} onfocusout={outFocus}/>
         <label for={props.id}>{props.label}</label>
