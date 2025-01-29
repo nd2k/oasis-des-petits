@@ -1,8 +1,9 @@
 <script lang="ts">  
     import * as Icon from 'svelte-awesome-icons';
-    let {children} = $props();
     import { state } from '$lib/state.svelte';
   
+    let {children} = $props();
+    
     function closeModal(): void {
       state.modalIsOpened = false;
     }
