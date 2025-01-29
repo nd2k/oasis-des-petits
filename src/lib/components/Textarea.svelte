@@ -18,11 +18,11 @@
 </script>
 
 <div class="label-container">
-    <!-- {#if props.icon !== null}
+    {#if props.icon !== null}
     <div class="icon" class:active={fieldState.isFocus}>
-        <props.icon />
+        <svelte:element this={props.icon} />
     </div>
-    {/if} -->
+    {/if}
     <label for={props.id} class:active={fieldState.isFocus}>{props.label}</label>
 </div>
 <textarea id={props.id} name={props.id} {rows} bind:value={value} onfocus={onFocus} onfocusout={outFocus}>

@@ -8,7 +8,6 @@
     import * as Icon from 'svelte-awesome-icons';
     import { disabledButton, emailValidation, firstNameValidation, nameValidation, phoneValidation } from '$lib/utils';
 	import { ButtonType } from '$lib/interface';
-	import { enhance } from '$app/forms';
 	import Textarea from '$lib/components/Textarea.svelte';
 
     function openModal() {

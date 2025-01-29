@@ -59,7 +59,6 @@ export const actions = {
 				}
 				.header {
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
 				padding-bottom: 20px;
 				border-bottom: 1px solid #ddd;
@@ -89,7 +88,6 @@ export const actions = {
 			<body>
 				<div class="email-container">
 					<div class="header">
-						<img src="https://oasis-des-petits.vercel.app/logo.webp" alt="Logo" style="max-width: 150px;" />
 						<h2>Nouvelle demande de renseignement</h2>
 					</div>
 					<div class="content">
