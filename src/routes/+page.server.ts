@@ -33,7 +33,6 @@ export const actions = {
 			const email = formData.get('email');
 			const phone = formData.get('phone');
 			const textarea = formData.get('request');
-			
 			const html = `
 			<!DOCTYPE html>
 			<html lang="fr">

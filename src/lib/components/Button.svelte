@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { ButtonType } from "$lib/interface";
 
-    let { label = "button", variant = "accent-1", onclick = null, disabled = false, type=ButtonType.BUTTON } = $props();
+    let { label = "button", variant = "accent-1", onclick = null, disabled = false, type=ButtonType.BUTTON, formaction="" } = $props();
 </script>
 
 {#if onclick}
-    <button class={variant} {onclick} {disabled} {type}>
+    <button class={variant} {onclick} {disabled} {type} {formaction}>
         {label}
     </button>
 {:else}
-    <button class={variant} {onclick} {disabled} {type}>
+    <button class={variant} {onclick} {disabled} {type} {formaction}>
         {label}
     </button>
 {/if}

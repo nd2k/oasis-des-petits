@@ -16,12 +16,12 @@
     }
 
     function handleSubmit() {
-        state.modalIsOpened = false;
-        return async({ update, result }) => {
-            await update();
-            console.log(result);
+        state.modalIsOpened = true;
+        // return async({ update, result }) => {
+        //     await update();
+        //     console.log(result);
             
-        }
+        // }
     }
     
 </script>
@@ -37,7 +37,7 @@
             <Field id="phone" label="Téléphone" icon={Icon.PhoneSolid} bind:value={state.bookingForm.phone} onblur={() => phoneValidation(state.bookingForm.phone)} validation={state.phoneValidationState} />
             <Field id="hp" label="hp" bind:value={state.bookingForm.hp} invisible={true}/>
             <Textarea id="request" label="Posez votre question" icon={Icon.CircleQuestionSolid} bind:value={state.bookingForm.message}/>
-            <Button disabled={disabledButton()} type={ButtonType.SUBMIT}/>
+            <Button disabled={disabledButton()} type={ButtonType.SUBMIT} />
         </form>
     </div>
 </Modal>
