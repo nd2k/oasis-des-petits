@@ -4,6 +4,7 @@
     import * as Icon from 'svelte-awesome-icons';
     import { state } from '$lib/state.svelte';
 	import BubbleBackground from '$lib/components/BubbleBackground.svelte';
+	import Loader from '$lib/components/Loader.svelte';
 
     let { children } = $props();
 
@@ -42,6 +43,7 @@
 <Navbar isMobile={ state.width < 930}/>
 <div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>
     <BubbleBackground />
+    <Loader />
     <main>
         {@render children()}
     </main>

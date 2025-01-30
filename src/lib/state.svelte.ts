@@ -1,10 +1,12 @@
-import { ValidationState } from "./interface";
+import { Topics, ValidationState } from "./interface";
 
 export let state = $state({
     width: 0,
     isNavExpanded: false,
     modalIsOpened: false,
+    isLoading: false,
     bookingForm: {
+        topic: Topics.FORMULE1,
         firstName: '',
         name: '',
         email: '',

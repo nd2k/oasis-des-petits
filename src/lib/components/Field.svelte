@@ -31,7 +31,7 @@
         <label for={props.id}>{props.label}</label>
         {#if validation !== null && validation.validationState === ValidationState.VALID}
             <div class="validation-icon">
-                <Icon.CircleCheckSolid />
+                <Icon.CircleCheckSolid size=16 />
             </div>
         {/if}
     </div>
@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
         gap: var(--size-fluid-2);
-        padding: var(--size-fluid-2) 0;
+        padding: var(--size-fluid-1) 0;
         & .icon {
             display: flex;
             align-items: center;
@@ -72,7 +72,7 @@
                 border: none;
                 outline: none;
                 flex: 1;
-                font-size: var(--size-fluid-3);
+                font-size: var(--size-fluid-2);
                 border-radius: 0;
                 width: 80%;
             }
@@ -87,7 +87,7 @@
                 font-size: 1rem;
                 transition: all 0.2s ease;
                 pointer-events: none;
-                font-size: var(--size-fluid-3);
+                font-size: var(--size-fluid-2);
             }
             & input:focus +label,
             input:not(.empty) +label {

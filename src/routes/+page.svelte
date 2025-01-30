@@ -7,11 +7,14 @@
 	import Field from '$lib/components/Field.svelte';
     import * as Icon from 'svelte-awesome-icons';
     import { disabledButton, emailValidation, firstNameValidation, nameValidation, phoneValidation } from '$lib/utils';
-	import { ButtonType } from '$lib/interface';
+	import { ButtonType, Topics, ValidationState } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
+	import { enhance } from '$app/forms';
+    import type { SubmitFunction } from './$types';
 
-    function openModal() {
+    function openModal(topic: Topics) {        
         state.modalIsOpened = true;
+        state.bookingForm.topic = topic;
         state.bookingForm.firstName = '';
         state.bookingForm.name = '';
         state.bookingForm.email = '';
@@ -19,25 +22,33 @@
         state.bookingForm.hp = '';
     }
 
-    async function handleSubmit(event: Event) {
-        console.log('handle submit');
-        event?.preventDefault();
-        const formElement = event.currentTarget as HTMLFormElement;
-        const response = await fetch('/', {
-            method: "POST",
-            body: new FormData(formElement)
-        });
-        state.modalIsOpened = false;
-        // return async({ update, result }) => {
-        //     await update();
-        //     console.log(result);
-            
-        // }
-        if (response.ok) {
-            console.log("Message envoyé !");
-        } else {
-            console.error("Erreur lors de l’envoi du message.");
+    const handleSubmit: SubmitFunction = () => {
+        state.isLoading = true;
+        return async({ update, result }) => {
+            await update()
+            state.isLoading = false;
+            resetFields();
+            state.modalIsOpened = false;
         }
+    }
+
+    function resetFields() {
+        state.emailValidationState = {
+            validationState: ValidationState.NOTVALIDATED,
+            errorMessage: ''
+        };
+        state.nameValidationState = {
+            validationState: ValidationState.NOTVALIDATED,
+            errorMessage: ''
+        };
+        state.firstNameValidationState = {
+            validationState: ValidationState.NOTVALIDATED,
+            errorMessage: ''
+        };
+        state.phoneValidationState = {
+            validationState: ValidationState.NOTVALIDATED,
+            errorMessage: ''
+        };
     }
     
 </script>
@@ -46,7 +57,7 @@
     <div class="modal">
         <p>Pour réserver votre formule préférée, veuillez remplir le formulaire de réservation ci-dessous.<br>
         Je prendrai soin de vous recontacter pour fixer ensemble un rendez-vous</p>
-        <form method="POST" action="?/contact" onsubmit={handleSubmit}>
+        <form method="POST" use:enhance={handleSubmit}>
             <Field id="name" label="Nom" bind:value={state.bookingForm.name} onblur={() => nameValidation(state.bookingForm.name)} validation={state.nameValidationState}>
                 <Icon.IdCardSolid />
             </Field>
@@ -59,9 +70,11 @@
             <Field id="phone" label="Téléphone" bind:value={state.bookingForm.phone} onblur={() => phoneValidation(state.bookingForm.phone)} validation={state.phoneValidationState}>
                 <Icon.PhoneSolid />
             </Field>
+            <Field id="topic" label="topic" bind:value={state.bookingForm.topic} invisible={true}>
+            </Field>
             <Field id="hp" label="hp" bind:value={state.bookingForm.hp} invisible={true}>
             </Field>
-            <Textarea id="request" label="Posez votre question" bind:value={state.bookingForm.message}>
+            <Textarea id="message" label="Posez votre question" bind:value={state.bookingForm.message}>
                 <Icon.CircleQuestionSolid />
             </Textarea>
             <Button disabled={disabledButton()} type={ButtonType.SUBMIT}/>
@@ -80,7 +93,7 @@
             <h2>100€</h2>
         </div>
         <div class="card-footer">
-            <Button label="Reservez" onclick={openModal} />
+            <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
         </div>
     </Card>
     <Card>
@@ -90,7 +103,7 @@
             <h2>120€</h2>
         </div>
         <div class="card-footer">
-            <Button label="Reservez" onclick={openModal} />
+            <Button label="Reservez" onclick={() => openModal(Topics.FORMULE2)} />
         </div>
     </Card>
     <Card>
@@ -100,7 +113,7 @@
             <h2>270€</h2>
         </div>
         <div class="card-footer">
-            <Button label="Reservez" onclick={openModal} />
+            <Button label="Reservez" onclick={() => openModal(Topics.FORMULE3)} />
         </div>
     </Card>
 </section>
@@ -148,8 +161,8 @@
        & p {
         border-left: 2px solid hsl(var(--dark-green-1));
         padding-left: var(--size-fluid-2);
-        margin-bottom: var(--size-fluid-4);
-        font-size: var(--size-fluid-3);
+        margin-bottom: var(--size-fluid-3);
+        font-size: var(--size-fluid-2);
        }
     }
     .title-h1 {

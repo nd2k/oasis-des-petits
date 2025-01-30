@@ -1,4 +1,4 @@
-import { ValidationState } from './interface';
+import { ValidationState, type DataContact } from './interface';
 import { state } from '$lib/state.svelte';
 
 export function emailValidation(email: string): void {

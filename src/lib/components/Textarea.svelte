@@ -31,6 +31,7 @@
 <style>
     .label-container {
         display: flex;
+        align-items: center;
         gap: var(--size-fluid-2);
         & .active {
             color: hsl(var(--light-pink-1));
@@ -38,7 +39,7 @@
         & label {
             font-size: 1rem;
             pointer-events: none;
-            font-size: var(--size-fluid-3);
+            font-size: var(--size-fluid-2);
         }
     }
     textarea {
