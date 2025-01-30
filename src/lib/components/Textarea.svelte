@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { value = $bindable(), rows = 5, ...props } = $props(); 
+    let { value = $bindable(), rows = 5, children = null, ...props } = $props(); 
 
     let fieldState = $state({
         isFocus: false,
@@ -18,9 +18,9 @@
 </script>
 
 <div class="label-container">
-    {#if props.icon !== null}
+    {#if children !== null}
     <div class="icon" class:active={fieldState.isFocus}>
-        <svelte:element this={props.icon} />
+        {@render children()}
     </div>
     {/if}
     <label for={props.id} class:active={fieldState.isFocus}>{props.label}</label>

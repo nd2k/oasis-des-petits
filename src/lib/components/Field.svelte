@@ -2,7 +2,7 @@
     import * as Icon from 'svelte-awesome-icons';
     import { ValidationState } from '$lib/interface';
 
-    let { value = $bindable(), validation = null, invisible = false, ...props} = $props();
+    let { value = $bindable(), validation = null, invisible = false, children = null, ...props} = $props();
     let fieldState = $state({
         isFocus: false,
         isEmpty: true
@@ -21,9 +21,9 @@
 </script>
 
 <div class="field-input" class:invisible={invisible}>
-    {#if props.icon !== null}
+    {#if children !== null}
         <div class="icon" class:active={fieldState.isFocus}>
-            <svelte:element this={props.icon} />
+            {@render children()}
         </div>
     {/if}
     <div class="input-container">
