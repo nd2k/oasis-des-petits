@@ -41,7 +41,7 @@ function createHtmlMessage(data: DataContact) {
         padding: 0;
         }
         .email-container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         background-color: #f5ead0;
@@ -51,8 +51,13 @@ function createHtmlMessage(data: DataContact) {
         .header {
         display: flex;
         align-items: center;
+        justify-content: space-around;
         padding-bottom: 20px;
         border-bottom: 1px solid #ddd;
+        }
+        .header img {
+        width: 5rem;
+        height: 5rem;
         }
         .header h1 {
         font-size: 24px;
@@ -79,6 +84,7 @@ function createHtmlMessage(data: DataContact) {
     <body>
         <div class="email-container">
             <div class="header">
+                <img src="https://oasis-des-petits.vercel.app/logo.png" alt="logo" />
                 <h2>Nouvelle demande de renseignement - ${data.topic}</h2>
             </div>
             <div class="content">
@@ -89,7 +95,8 @@ function createHtmlMessage(data: DataContact) {
                 <div class='textarea'>${data.message}</div>
             </div>
         </div>
-    </body>`			
+    </body>
+    </html>`			
 }
 
 export const actions: Actions = {

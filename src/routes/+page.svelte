@@ -11,6 +11,7 @@
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
     import type { SubmitFunction } from './$types';
+	import Portfolio from '$lib/components/Portfolio.svelte';
 
     function openModal(topic: Topics) {        
         state.modalIsOpened = true;
@@ -149,6 +150,11 @@
         <p>Dans cette discipline de bain emmailloté, l’approche est assez similaire car au cours de ce bain, je permet au bébé de retrouver des sensations semblables à celles qui l’avait dans le ventre de sa maman.</p> 
         <p>De plus au cours de ce moment intime entre le bébé et ses parents, ce bain a pour vertu de renforcer les liens d’attachement et de recréer le cocon intra-utérin.</p>
     </div>
+</section>
+
+<section class="galery">
+    <h1 class="title-h1">Gallerie</h1>
+    <Portfolio />
 </section>
 
 <style>
