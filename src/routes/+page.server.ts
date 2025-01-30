@@ -93,7 +93,7 @@ export const actions = {
 					<div class="content">
 						<h3>Bonjour Laura</h3>
 						<p>Tu as reçu une nouvelle demande de renseignements de la part de <span class='info'>${firstName} ${name}</span>. Il est possible de contacter cette
-						personne au numéro <a href=${phone}>${phone}</a> ou via mail - ${email}</p>
+						personne au numéro <a href="tel:${phone}">${phone}</a> ou via mail - ${email}</p>
 						<p>Ci-dessous son message: </p>
 						<div class='textarea'>${textarea}</div>
 					</div>

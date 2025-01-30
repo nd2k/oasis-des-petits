@@ -27,6 +27,9 @@
     </div>
     <div class="social-media">
         <div class="top-header-icons">
+            <a href="tel:+32499602548">
+                <Icon.PhoneSolid />
+            </a>
             <a href="https://www.facebook.com/laura.vaneeckhoudt" target="_blank" rel="noopener noreferrer">
                 <Icon.FacebookBrands />
             </a>
