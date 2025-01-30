@@ -1,34 +1,64 @@
 <script lang="ts">
-    let {image = "./serviette_2.webp", children} = $props();
+    let { flipped = false, front, back } = $props();
+
+    function flipKeyAction() {
+
+    }
 </script>
 
-<div class="card">
-    <div class="card-image">
-        <img src={image} alt="serviette" />
+<div class="card-container">
+    <div class="card" class:flipped={flipped}>
+        <div class="card-front">
+            {@render front()}
+        </div>
+        <div class="card-back">
+            {@render back()}
+        </div>
     </div>
-    {@render children()}
 </div>
 
 <style>
-    .card {
-        box-shadow: var(--shadow-3);
-        border-radius: var(--radius-3);
-        margin: var(--size-fluid-3) auto;
+    .card-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: var(--size-fluid-2);
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        perspective: 1000px;
+    }
+    .card {
         width: var(--size-fluid-10);
+        height: var(--size-fluid-20);
         position: relative;
-        z-index: 10;
-        background-color: hsl(var(--white-0));
-        & .card-image {
-            padding: var(--size-fluid-2);
-            img {
-                border-radius: var(--radius-3);
-                max-width: 100%;
-            }
-        }
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    }
+
+    .flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-front {
+        background: hsl(var(--white-0));
+    }
+
+    .card-back {
+        background: hsl(var(--white-0));
+        transform: rotateY(180deg);
     }
 </style>

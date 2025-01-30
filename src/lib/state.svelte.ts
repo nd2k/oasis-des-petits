@@ -14,6 +14,11 @@ export let state = $state({
         hp: '',
         message: ''
     },
+    cardStatus: {
+        isCard1Flipped: false,
+        isCard2Flipped: false,
+        isCard3Flipped: false,
+    },
     emailValidationState: {
         validationState: ValidationState.NOTVALIDATED,
         errorMessage: ''

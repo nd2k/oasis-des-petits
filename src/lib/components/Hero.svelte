@@ -107,19 +107,4 @@
             opacity: 1;
         }
     }
-
-    @keyframes fadeInAndScale {
-        0% {
-            opacity: 0;
-            transform: scale3d(0.75, 0.75, 1);
-        }
-        70% {
-            opacity: 0;
-            transform: scale3d(0.75, 0.75, 1);
-        }
-        100% {
-            opacity: 1;
-            transform: scale3d(1, 1, 1);
-        }
-    }
 </style>

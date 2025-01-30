@@ -52,6 +52,7 @@
     let lightbox: HTMLElement|null = $state(null);
     let lightboxImg: HTMLImageElement|null = $state(null);
     let closeBtn: HTMLElement|null = $state(null);
+    let xmark: HTMLElement|null = $state(null);
 
     $effect(() => {
         images = Array.from(portfolio.querySelectorAll('img'));
@@ -79,7 +80,7 @@
 
     function closeLightbox(e: Event) {
         const target = e.target as HTMLElement;
-        if (target === closeBtn || target === lightbox) {
+        if (target === closeBtn || target === lightbox || target.parentElement === closeBtn) {
             isVisible = false;
         }
     }
@@ -106,7 +107,7 @@
 {#if isVisible}
     <div class="lightbox" bind:this={lightbox} onclick={closeLightbox} onkeydown={closeKeyAction} role="button" tabindex="-1">
         <button class="close" onclick={closeLightbox} bind:this={closeBtn}><Icon.CircleXmarkSolid /></button>
-        <button class="prev" onclick={previousImage}><Icon.CircleArrowRightSolid/></button>
+        <button class="prev" onclick={previousImage}><Icon.CircleArrowLeftSolid/></button>
         <img src="/" alt="ligthbox"  bind:this={lightboxImg}/>
         <button class="next" onclick={nextImage}><Icon.CircleArrowRightSolid /></button>
     </div>
@@ -144,6 +145,7 @@
             max-width: 90%;
             max-height: 90%;
             border-radius:  var(--radius-3);
+            animation: fadeIn 2s;
         }
         & .prev,
         & .next {
@@ -176,6 +178,14 @@
             border: none;
             z-index: 1001;
         }
+    }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 </style>
