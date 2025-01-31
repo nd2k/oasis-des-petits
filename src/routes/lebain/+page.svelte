@@ -17,7 +17,7 @@
 
 <style>
     section {
-        background: url('./background.svg') no-repeat center center;
+        background: url('/background.svg') no-repeat center center;
         background-size: cover;
     }
     .title-h1 {
