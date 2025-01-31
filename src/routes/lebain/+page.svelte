@@ -1,0 +1,44 @@
+<section class="bath section">
+    <h1 class="title-h1">Le bain</h1>
+    <div class="section-content">
+        <p>La séance commence par un moment d’échange avec vous. Cet entretien permet d’exprimer vos ressentis autour de la grossesse et 
+            de l’accouchement, dans un cadre bienveillant et à l’écoute. Ce moment est essentiel pour instaurer un climat de confiance 
+            entre vous, votre bébé et moi-même.</p>
+        <p>Ensuite, place au bain, qui se déroule dans une ambiance calme et apaisante. Une musique douce, choisie par les parents ou la 
+            baigneuse, accompagne ce moment. Le bain débute par une phase de détente où le bébé est délicatement baigné emmailloté dans une
+             eau à 38°C, recréant la sécurité et le confort de sa vie intra-utérine.</p>
+        <p>Au fil du bain, vous êtes invités à participer activement si vous le souhaitez, renforçant le lien avec votre bébé. Dans cet 
+            espace de sérénité, votre bébé se sentira suffisamment en confiance pour exprimer ses émotions, raconter son histoire à travers
+             ses mouvements et retrouver sa position fœtale. Ce moment d’échange et d’écoute se conclut par le désemmaillotage, symbolisant
+              une « renaissance » pleine de douceur.</p>
+        <p>La séance se termine par un peau à peau, un instant précieux pour prolonger cette connexion intime et renforcer le lien familial.</p>    
+    </div>
+</section>
+
+<style>
+    section {
+        background: url('./background.svg') no-repeat center center;
+        background-size: cover;
+    }
+    .title-h1 {
+        font-size: var(--size-fluid-4);
+        padding: var(--size-fluid-4);
+        color: hsl(var(--dark-green-1));
+        display: inline-block;
+    }
+    .title-h1::after {
+        content: "";
+        display: block;
+        width: 75%;
+        height: 2px; 
+        background-color: hsl(var(--dark-green-1));
+        margin-top: var(--size-fluid-2);
+    }
+    .section-content {
+        padding: 0 var(--size-fluid-4);
+    }
+    p {
+        padding: var(--size-fluid-2) 0;
+        text-align: justify;
+    }
+</style>

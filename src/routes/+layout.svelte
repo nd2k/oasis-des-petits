@@ -43,7 +43,7 @@
 </div>
 <Navbar isMobile={ state.width < 930}/>
 <div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>
-    <BubbleBackground />
+    <!-- <BubbleBackground /> -->
     <Loader />
     <main>
         {@render children()}

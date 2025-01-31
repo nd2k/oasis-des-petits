@@ -22,7 +22,7 @@
           background-color: {bubble.color};
           left: {bubble.left};
           top: {bubble.top};
-          position: absolute;
+          position: fixed;
         "
       ></div>
     {/each}
@@ -33,15 +33,16 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 400vh;
       z-index: -1; 
       pointer-events: none;
       overflow-x: hidden;
-      .bubble {
+    & .bubble {
         border-radius: 50%;
         box-shadow: var(--shadow-3);
-        position: fixed;
+        position: absolute;
       }
     }
+    
   </style>

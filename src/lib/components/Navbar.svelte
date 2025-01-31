@@ -11,7 +11,7 @@
         },
         {
             label: "Le bain",
-            href: "#"
+            href: "/lebain"
         },
         {
             label: "Formules",
