@@ -281,6 +281,7 @@
             min-height: 10rem;
             & .title {
                 font-size: var(--size-fluid-3);
+                text-align: center;
             }
             & h2 {
                 font-size: var(--size-fluid-2);
