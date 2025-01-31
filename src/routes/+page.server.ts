@@ -102,7 +102,6 @@ function createHtmlMessage(data: DataContact) {
 export const actions: Actions = {
 	default: async ({ request }) => {
 		try {
-			console.log('trigger sending email...');
 			const formData = await request.formData();
 			const data = Object.fromEntries(formData);
 			const html = createHtmlMessage(data);

@@ -1,14 +1,14 @@
 <script lang="ts">
     let bubbles = [
-        { size: 200, color: 'hsl(var(--light-pink-1))', left: '60%', top: '8%' },
-        { size: 80, color: 'hsl(var(--dark-green-1))', left: '90%', top: '15.5%' },
-        { size: 150, color: 'hsl(var(--light-green-1))', left: '-10%', top: '22%' },
-        { size: 300, color: 'hsl(var(--dark-green-1))', left: '50%', top: '32%' },
-        { size: 200, color: 'hsl(var(--beige-1))', left: '0%', top: '44%' },
-        { size: 400, color: 'hsl(var(--light-green-1))', left: '45%', top: '53%' },
-        { size: 150, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '63%' },
-        { size: 250, color: 'hsl(var(--dark-green-1))', left: '45%', top: '73.5%' },
-        { size: 300, color: 'hsl(var(--light-green-1))', left: '10%', top: '85%' },
+        { size: 200, color: 'hsl(var(--light-pink-1))', left: '60vw', top: '50vh' },
+        { size: 80, color: 'hsl(var(--dark-green-1))', left: '90vw', top: '95vh' },
+        { size: 150, color: 'hsl(var(--light-green-1))', left: '-10vw', top: '130vh' },
+        { size: 300, color: 'hsl(var(--dark-green-1))', left: '50vw', top: '190vh' },
+        { size: 200, color: 'hsl(var(--beige-1))', left: '0vw', top: '260vh' },
+        { size: 400, color: 'hsl(var(--light-green-1))', left: '45vw', top: '310vh' },
+        { size: 150, color: 'hsl(var(--light-pink-1))', left: '-10vw', top: '380vh' },
+        { size: 250, color: 'hsl(var(--dark-green-1))', left: '45vw', top: '442vh' },
+        { size: 300, color: 'hsl(var(--light-green-1))', left: '10vw', top: '490vh' },
     ];
 </script>
 
