@@ -21,11 +21,15 @@ export type EmailMessage = {
     to: string,
     subject: string,
     html: string,
-    // attachments: [{
-        
-    // }]
 }
 
 export type DataContact = { 
     [k: string]: FormDataEntryValue; 
+}
+
+export type Bubble = {
+    size: number,
+    color: string,
+    top: string,
+    left: string
 }

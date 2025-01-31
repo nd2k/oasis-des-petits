@@ -91,7 +91,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-size: 100% 100%;
-            height: var(--size-fluid-15);
+            height: var(--size-fluid-20);
             width: 100%;
         }
         & .slogan {

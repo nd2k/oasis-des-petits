@@ -1,11 +1,15 @@
 <script lang="ts">
     let bubbles = [
-        { size: 200, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '18%' },
-        { size: 150, color: 'hsl(var(--dark-green-1))', left: '75%', top: '23%' },
-        { size: 300, color: 'hsl(var(--light-green-1))', left: '50%', top: '48%' },
-        { size: 200, color: 'hsl(var(--beige-1))', left: '-20%', top: '70%' },
-        { size: 400, color: 'hsl(var(--light-green-1))', left: '55%', top: '90%' },
-        ];
+        { size: 200, color: 'hsl(var(--light-pink-1))', left: '60%', top: '8%' },
+        { size: 80, color: 'hsl(var(--dark-green-1))', left: '90%', top: '15.5%' },
+        { size: 150, color: 'hsl(var(--light-green-1))', left: '-10%', top: '22%' },
+        { size: 300, color: 'hsl(var(--dark-green-1))', left: '50%', top: '32%' },
+        { size: 200, color: 'hsl(var(--beige-1))', left: '0%', top: '44%' },
+        { size: 400, color: 'hsl(var(--light-green-1))', left: '45%', top: '53%' },
+        { size: 150, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '63%' },
+        { size: 250, color: 'hsl(var(--dark-green-1))', left: '45%', top: '73.5%' },
+        { size: 300, color: 'hsl(var(--light-green-1))', left: '10%', top: '85%' },
+    ];
 </script>
 
 <div class="background">

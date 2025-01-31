@@ -4,7 +4,7 @@
     const imgGalleryName = [
         {
             src: "photo_1.webp",
-            alt: "photo 1"
+            alt: "bain me"
         },
         {
             src: "photo_2.webp",

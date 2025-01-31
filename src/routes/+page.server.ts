@@ -108,7 +108,7 @@ export const actions: Actions = {
 			const html = createHtmlMessage(data);
 			const message: EmailMessage = {
 				from: 'infos@oasis-des-petits.be',
-				to: 'nicolas.decat@gmail.com',
+				to: GOOGLE_EMAIL,
 				subject: 'Demande de renseignements',
 				html: html
 			};

@@ -10,11 +10,11 @@
             href: "/"
         },
         {
-            label: "Formules",
+            label: "Le bain",
             href: "#"
         },
         {
-            label: "Le bain",
+            label: "Formules",
             href: "#"
         },
         {

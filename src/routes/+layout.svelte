@@ -7,6 +7,7 @@
 	import Loader from '$lib/components/Loader.svelte';
 
     let { children } = $props();
+    let year = new Date().getFullYear();
 
     function closeNavbar() {
         state.isNavExpanded = false;
@@ -48,7 +49,7 @@
         {@render children()}
     </main>
 </div>
-<footer>Footer</footer>
+<footer>Laura Van Eeckhoudt &copy;{year}</footer>
 
 <style>
     .top-header {
@@ -81,5 +82,15 @@
         height: 100%;
         width: 100%;
         position: relative;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(var(--beige-1));
+        color: hsl(var(--dark-green-1));
+        padding: 0;
+        margin: 0;
+        height: var(--size-fluid-4);
     }
 </style>
