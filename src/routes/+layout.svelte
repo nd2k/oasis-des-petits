@@ -78,11 +78,9 @@
             }
         }
     }
-    /* .wrapper {
-        height: 100vh;
-        width: 100vw;
+    .wrapper {
         position: relative;
-    } */
+    }
     footer {
         position: relative;
         display: flex;
