@@ -1,5 +1,4 @@
 @import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --beige-1: 41, 66%, 89%;
@@ -25,6 +24,6 @@
 
 html,
 body {
-    font-family:  "Noto Sans", "serif";
+    font-family:  'Noto Sans Variable', sans-serif;
 }
 

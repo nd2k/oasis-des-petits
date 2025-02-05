@@ -1,4 +1,5 @@
 <script lang="ts">
+    import '@fontsource-variable/noto-sans';
     import '../styles/global.css';
 	import Navbar from '$lib/components/Navbar.svelte';
     import * as Icon from 'svelte-awesome-icons';
