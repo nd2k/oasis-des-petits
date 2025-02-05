@@ -37,12 +37,7 @@
         {
             src: "photo_9.webp",
             alt: "photo 9"
-        },
-        {
-            src: "photo_10.webp",
-            alt: "photo 10"
-        },
-        
+        }        
     ];
     
     let currentIndex = $state(0);
