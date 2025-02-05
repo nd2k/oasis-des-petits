@@ -49,7 +49,7 @@
 <style>
     .hero-mobile {
         & .img-hero {
-            background-image: url('/photo_1_modified.jpg');
+            background-image: url('/photo_1_modified.webp');
             background-repeat: no-repeat;
             background-size: contain;
             background-size: 100% 100%;
