@@ -3,7 +3,6 @@
 	import Navbar from '$lib/components/Navbar.svelte';
     import * as Icon from 'svelte-awesome-icons';
     import { state } from '$lib/state.svelte';
-	import BubbleBackground from '$lib/components/BubbleBackground.svelte';
 	import Loader from '$lib/components/Loader.svelte';
 
     let { children } = $props();
@@ -19,9 +18,14 @@
         }
     }
 
+    $effect(() => {
+        console.log(state.height);
+        
+    })
+
 </script>
 
-<svelte:window bind:innerWidth={state.width} />
+<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} />
 <div class="top-header">
     <div class="name">
         Laura Van Eeckhoudt<br>
@@ -42,8 +46,7 @@
     </div>
 </div>
 <Navbar isMobile={ state.width < 930}/>
-<div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>
-    <!-- <BubbleBackground /> -->
+<div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>     
     <Loader />
     <main>
         {@render children()}
@@ -52,6 +55,41 @@
 <footer>Laura Van Eeckhoudt &copy;{year}</footer>
 
 <style>
+    :global(.title-h1) {
+        font-size: var(--size-fluid-4);
+        padding: var(--size-fluid-4);
+        color: hsl(var(--dark-green-1));
+        display: inline-block;
+    }
+    :global(.title-h1::after) {
+        content: "";
+        display: block;
+        width: 75%;
+        height: 2px; 
+        background-color: hsl(var(--dark-green-1));
+        margin-top: var(--size-fluid-2);
+    }
+    :global(.title-h2) {
+        font-size: var(--size-fluid-3);
+        padding: var(--size-fluid-2) 0;
+        color: hsl(var(--light-green-1));
+        display: inline-block;
+    }
+    :global(.title-h2::after) {
+        content: "";
+        display: block;
+        width: 75%;
+        height: 2px; 
+        background-color: hsl(var(--light-green-1));
+        margin-top: var(--size-fluid-2);
+    }
+    :global(.section-content) {
+        padding: 0 var(--size-fluid-4);
+    }
+    :global(p) {
+        padding: var(--size-fluid-2) 0;
+        text-align: justify;
+    }
     .top-header {
         background-color: hsl(var(--light-green-1));
         display: flex;
@@ -79,7 +117,13 @@
         }
     }
     .wrapper {
-        position: relative;
+        min-height: calc(100vh - 9rem);
+        & svg {
+            position: absolute;
+            z-index: -1000;
+            width: 100vw;
+            height: 600vh;
+        }
     }
     footer {
         position: relative;

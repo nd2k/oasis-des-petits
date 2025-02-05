@@ -3,10 +3,13 @@
     import { slide } from 'svelte/transition';
     import { base } from '$app/paths';
     import { state } from '$lib/state.svelte';
+    import { beforeNavigate } from '$app/navigation';
+    
+    beforeNavigate(() => (state.isNavExpanded = false));
 
     const links = [ 
         { 
-            label: "Acceuil",
+            label: "Accueil",
             href: "/"
         },
         {
@@ -15,20 +18,20 @@
         },
         {
             label: "Formules",
-            href: "#"
+            href: "/formules"
         },
         {
             label: "À propos",
-            href: "#"
+            href: "/apropos"
         },
         
         {
             label: "Galerie",
-            href: "#"
+            href: "/galerie"
         },
         {
             label: "Contact",
-            href:"#"
+            href:"/contact"
         }
     ]
 

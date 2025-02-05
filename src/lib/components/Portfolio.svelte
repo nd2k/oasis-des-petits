@@ -80,7 +80,7 @@
 
     function closeLightbox(e: Event) {
         const target = e.target as HTMLElement;
-        if (target === closeBtn || target === lightbox || target.parentElement === closeBtn) {
+        if (target === closeBtn || target === lightbox || target.parentElement === closeBtn || target.parentElement?.parentElement === closeBtn) {
             isVisible = false;
         }
     }

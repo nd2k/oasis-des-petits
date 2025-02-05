@@ -6,68 +6,13 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import Field from '$lib/components/Field.svelte';
     import * as Icon from 'svelte-awesome-icons';
-    import { disabledButton, emailValidation, firstNameValidation, nameValidation, phoneValidation } from '$lib/utils';
-	import { ButtonType, Topics, ValidationState } from '$lib/interface';
+    import { disabledButton, emailValidation, firstNameValidation, flipCard, handleSubmit, nameValidation, openModal, phoneValidation } from '$lib/utils';
+	import { ButtonType, Topics } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
-    import type { SubmitFunction } from './$types';
 	import Portfolio from '$lib/components/Portfolio.svelte';
 
     let image = "./serviette_2.webp";
-    let flippedCard1 = false;
-    let flippedCard2 = false;
-    let flippedCard3 = false;
-
-    function openModal(topic: Topics) {        
-        state.modalIsOpened = true;
-        state.bookingForm.topic = topic;
-        state.bookingForm.firstName = '';
-        state.bookingForm.name = '';
-        state.bookingForm.email = '';
-        state.bookingForm.phone = '';
-        state.bookingForm.hp = '';
-    }
-
-    function flipCard(topic: Topics) {
-        if (Topics.FORMULE1 === topic) {
-            flippedCard1 = !flippedCard1;
-        }
-        if (Topics.FORMULE2 === topic) {
-            flippedCard2 = !flippedCard2;
-        }
-        if (Topics.FORMULE3 === topic) {
-            flippedCard3 = !flippedCard3;
-        }
-    }
-
-    const handleSubmit: SubmitFunction = () => {
-        state.isLoading = true;
-        return async({ update }) => {
-            await update()
-            state.isLoading = false;
-            resetFields();
-            state.modalIsOpened = false;
-        }
-    }
-
-    function resetFields() {
-        state.emailValidationState = {
-            validationState: ValidationState.NOTVALIDATED,
-            errorMessage: ''
-        };
-        state.nameValidationState = {
-            validationState: ValidationState.NOTVALIDATED,
-            errorMessage: ''
-        };
-        state.firstNameValidationState = {
-            validationState: ValidationState.NOTVALIDATED,
-            errorMessage: ''
-        };
-        state.phoneValidationState = {
-            validationState: ValidationState.NOTVALIDATED,
-            errorMessage: ''
-        };
-    }
     
 </script>
 
@@ -121,7 +66,7 @@
 
 <section class="formules">
     <h1 class="title-h1">Les Formules</h1>
-    <Card flipped={flippedCard1}>
+    <Card flipped={state.flippedCard1}>
         {#snippet front()}
             <div class="card-image">
                 <img src={image} alt="serviette" />
@@ -146,7 +91,7 @@
         </div>
         {/snippet}
     </Card>
-    <Card flipped={flippedCard2}>
+    <Card flipped={state.flippedCard2}>
         {#snippet front()}
             <div class="card-image">
                 <img src={image} alt="serviette" />
@@ -171,7 +116,7 @@
         </div>
         {/snippet}
     </Card>
-    <Card flipped={flippedCard3}>
+    <Card flipped={state.flippedCard3}>
         {#snippet front()}
             <div class="card-image">
                 <img src={image} alt="serviette" />
@@ -232,34 +177,6 @@
         margin-bottom: var(--size-fluid-3);
         font-size: var(--size-fluid-2);
        }
-    }
-    .title-h1 {
-        font-size: var(--size-fluid-4);
-        padding: var(--size-fluid-4);
-        color: hsl(var(--dark-green-1));
-        display: inline-block;
-    }
-    .title-h1::after {
-        content: "";
-        display: block;
-        width: 75%;
-        height: 2px; 
-        background-color: hsl(var(--dark-green-1));
-        margin-top: var(--size-fluid-2);
-    }
-    .title-h2 {
-        font-size: var(--size-fluid-3);
-        padding: var(--size-fluid-2) 0;
-        color: hsl(var(--light-green-1));
-        display: inline-block;
-    }
-    .title-h2::after {
-        content: "";
-        display: block;
-        width: 75%;
-        height: 2px; 
-        background-color: hsl(var(--light-green-1));
-        margin-top: var(--size-fluid-2);
     }
     .formules {
         display: flex;

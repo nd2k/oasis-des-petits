@@ -49,7 +49,7 @@
 <style>
     .hero-mobile {
         & .img-hero {
-            background-image: url('/photo_1.webp');
+            background-image: url('/photo_1_modified.jpg');
             background-repeat: no-repeat;
             background-size: contain;
             background-size: 100% 100%;
@@ -87,7 +87,7 @@
         display: flex;
         flex-direction: row;
         & .img-hero {
-            background-image: url('/photo_2.webp');
+            background-image: url('/photo_1.webp');
             background-repeat: no-repeat;
             background-size: contain;
             background-size: 100% 100%;

@@ -14,31 +14,3 @@
         <p>La séance se termine par un peau à peau, un instant précieux pour prolonger cette connexion intime et renforcer le lien familial.</p>    
     </div>
 </section>
-
-<style>
-    section {
-        background: url('/background.svg') no-repeat center center;
-        background-size: cover;
-    }
-    .title-h1 {
-        font-size: var(--size-fluid-4);
-        padding: var(--size-fluid-4);
-        color: hsl(var(--dark-green-1));
-        display: inline-block;
-    }
-    .title-h1::after {
-        content: "";
-        display: block;
-        width: 75%;
-        height: 2px; 
-        background-color: hsl(var(--dark-green-1));
-        margin-top: var(--size-fluid-2);
-    }
-    .section-content {
-        padding: 0 var(--size-fluid-4);
-    }
-    p {
-        padding: var(--size-fluid-2) 0;
-        text-align: justify;
-    }
-</style>

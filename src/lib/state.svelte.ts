@@ -2,6 +2,7 @@ import { Topics, ValidationState } from "./interface";
 
 export let state = $state({
     width: 0,
+    height: 0,
     isNavExpanded: false,
     modalIsOpened: false,
     isLoading: false,
@@ -34,6 +35,9 @@ export let state = $state({
     phoneValidationState: {
         validationState: ValidationState.NOTVALIDATED,
         errorMessage: ''
-    }
+    },
+    flippedCard1: false,
+    flippedCard2: false,
+    flippedCard3: false
 });
 
