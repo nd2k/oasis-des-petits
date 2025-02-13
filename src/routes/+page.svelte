@@ -184,9 +184,9 @@
         gap: var(--size-fluid-4);
     & .card-image {
         padding: var(--size-fluid-2);
-        .img-card img {
-            border-radius: 50%;
+        .img-card {
             max-width: 100%;
+            border-radius: var(--radius-3);
         }
     }
     & .card-body {

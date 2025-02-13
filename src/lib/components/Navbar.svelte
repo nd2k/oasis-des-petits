@@ -97,7 +97,7 @@
             display: flex;
             align-items: center;
             .logo {
-                width: var(--size-9);
+                width: var(--size-10);
             }
         }
     }

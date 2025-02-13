@@ -34,7 +34,7 @@
     </div>
     <div class="social-media">
         <div class="top-header-icons">
-            <a href="tel:+32499602548">
+            <a href="tel:+32479411112">
                 <Icon.PhoneSolid />
             </a>
             <a href="https://www.facebook.com/laura.vaneeckhoudt" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@
     :global(.title-h2) {
         font-size: var(--size-fluid-3);
         padding: var(--size-fluid-2) 0;
-        color: hsl(var(--light-green-1));
+        color: hsl(var(--light-green-2));
         display: inline-block;
     }
     :global(.title-h2::after) {
@@ -81,7 +81,7 @@
         display: block;
         width: 75%;
         height: 2px; 
-        background-color: hsl(var(--light-green-1));
+        background-color: hsl(var(--light-green-2));
         margin-top: var(--size-fluid-2);
     }
     :global(.section-content) {
@@ -101,9 +101,9 @@
         font-size: var(--size-fluid-2);
         padding: var(--size-fluid-1);
         & .name {
-            font-size: var(--size-px-3);
+            font-size: var(--size-px-4);
             & small {
-                font-size: var(--size-px-2);
+                font-size: var(--size-px-3);
             }
         }
         & .social-media {
@@ -119,12 +119,12 @@
     }
     .wrapper {
         min-height: calc(100vh - 9rem);
-        & svg {
+        /* & svg {
             position: absolute;
             z-index: -1000;
             width: 100vw;
             height: 600vh;
-        }
+        } */
     }
     footer {
         position: relative;

@@ -1,14 +1,14 @@
 <script lang="ts">
     import * as Icon from 'svelte-awesome-icons';
-    import photo_1 from '../../../static/gallery/photo_1.webp?enhanced'
-    import photo_2 from '../../../static/gallery/photo_2.webp?enhanced'
-    import photo_3 from '../../../static/gallery/photo_3.webp?enhanced'
-    import photo_4 from '../../../static/gallery/photo_4.webp?enhanced'
-    import photo_5 from '../../../static/gallery/photo_5.webp?enhanced'
-    import photo_6 from '../../../static/gallery/photo_6.webp?enhanced'
-    import photo_7 from '../../../static/gallery/photo_7.webp?enhanced'
-    import photo_8 from '../../../static/gallery/photo_8.webp?enhanced'
-    import photo_9 from '../../../static/gallery/photo_9.webp?enhanced'
+    import photo_1 from '$lib/gallery/photo_1.webp?enhanced'
+    import photo_2 from '$lib/gallery/photo_2.webp?enhanced'
+    import photo_3 from '$lib/gallery/photo_3.webp?enhanced'
+    import photo_4 from '$lib/gallery/photo_4.webp?enhanced'
+    import photo_5 from '$lib/gallery/photo_5.webp?enhanced'
+    import photo_6 from '$lib/gallery/photo_6.webp?enhanced'
+    import photo_7 from '$lib/gallery/photo_7.webp?enhanced'
+    import photo_8 from '$lib/gallery/photo_8.webp?enhanced'
+    import photo_9 from '$lib/gallery/photo_9.webp?enhanced'
 
     const imgGalleryName = [
         {
@@ -128,7 +128,7 @@
                 margin: 0;
                 padding: 0;
                 border: none;
-                & img {
+                & .thumbnail {
                     width: 200px;
                     height: auto;
                 }
