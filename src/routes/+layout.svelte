@@ -5,6 +5,7 @@
     import * as Icon from 'svelte-awesome-icons';
     import { state } from '$lib/state.svelte';
 	import Loader from '$lib/components/Loader.svelte';
+	import Analytics from '$lib/components/Analytics.svelte';
 
     let { children } = $props();
     let year = new Date().getFullYear();
@@ -25,6 +26,8 @@
     })
 
 </script>
+
+<Analytics />
 
 <svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} />
 <div class="top-header">

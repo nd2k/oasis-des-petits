@@ -11,10 +11,7 @@
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
 	import Portfolio from '$lib/components/Portfolio.svelte';
-	import Seo from '$lib/components/Seo.svelte';
-
-    let image = "./serviette_2.webp";
-    
+	import Seo from '$lib/components/Seo.svelte';    
 </script>
 
 <Seo 
