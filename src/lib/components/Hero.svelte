@@ -43,39 +43,43 @@
 {/if}
 
 <style>
-   
-.keywords {
-    animation: fadeIn 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
-    transform-origin: center;
-    position: absolute;
-    top: 15%;
-    width: 100%;
-    height: 55%;
 
-& .keyword {
-    color: hsl(var(--white-0));
-    font-size: var(--size-fluid-3);
+.hero-mobile {
     position: relative;
-    padding: var(--size-fluid-3);
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: .15em;
-}
-& .keyword-1 {
-    padding-top: 15%;
-    padding-left: 50%;
-}
-& .keyword-2 {
-    padding-top: 65%;
-    padding-bottom: 0;
-}
-& .keyword-3 {
-    padding-left: 10%;
-    padding-bottom: 0;
-}
-& .keyword-4 {
-    padding-left: 20%;
-}
+    & .keywords {
+        animation: fadeIn 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+        transform-origin: center;
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+
+        & .keyword {
+            color: hsl(var(--white-0));
+            font-size: var(--size-fluid-3);
+            position: relative;
+            padding: var(--size-fluid-3);
+            overflow: hidden;
+            white-space: nowrap;
+            letter-spacing: .15em;
+        }
+        & .keyword-1 {
+            padding-top: 5%;
+            padding-left: 50%;
+        }
+        & .keyword-2 {
+            padding-top: 70%;
+            padding-bottom: 0;
+        }
+        & .keyword-3 {
+            padding-left: 10%;
+            padding-bottom: 0;
+        }
+        & .keyword-4 {
+            padding-left: 20%;
+        }
+    }
+
 }
 .hero {
 display: flex;
