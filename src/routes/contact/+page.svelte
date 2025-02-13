@@ -7,8 +7,14 @@
 	import Textarea from "$lib/components/Textarea.svelte";
 	import Button from "$lib/components/Button.svelte";
 	import { ButtonType } from "$lib/interface";
+	import Seo from "$lib/components/Seo.svelte";
 
 </script>
+
+<Seo 
+    title="Contactez-nous | Posez vos questions »" 
+    description="N'hésitez pas à nous contacter afin d'organiser un entretien en présentiel ou par téléphone afin d'obtenir toutes les informations nécéssaires." 
+    type="Website"/>
 
 <section>
     <div class="contact-container">

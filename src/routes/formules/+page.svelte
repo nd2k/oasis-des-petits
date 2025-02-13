@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from "$lib/components/Button.svelte";
 	import Card from "$lib/components/Card.svelte";
+	import Seo from "$lib/components/Seo.svelte";
 	import { Topics } from "$lib/interface";
 	import { openModal } from "$lib/utils";
 
@@ -22,6 +23,12 @@
     }
 
 </script>
+
+<Seo 
+    title="Nos formules | Descriptions de nos services" 
+    description="Vous trouverez toutes les informations concernant nos trois formules tarifaires comme la durée de la prestation, ce qu'elle comprend et son prix." 
+    type="Website"/>
+    
 <section class="formules">
     <h1 class="title-h1">Les Formules</h1>
     <Card flipped={flippedCard1}>
