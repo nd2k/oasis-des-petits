@@ -4,7 +4,7 @@
 
 {#if state.width < 930}
 <section class="hero-mobile">
-    <enhanced:img src="/static/photo_1_modified.webp" alt="Bébé dans son bain" height="500" width="420" class="img-hero" />
+    <enhanced:img src="/static/photo_1_modified.webp" alt="Bébé dans son bain" height="500" width="420" class="img-hero" fetchpriority="high" />
     <div class="keywords">
         <div class="keyword keyword-1">
             Renaissance
@@ -62,6 +62,7 @@
     letter-spacing: .15em;
 }
 & .keyword-1 {
+    padding-top: 15%;
     padding-left: 50%;
 }
 & .keyword-2 {
