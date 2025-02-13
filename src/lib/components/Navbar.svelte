@@ -43,7 +43,7 @@
     <div class="menu-wrapper">
         <div class="logo-container">
             <a href="{base}/" aria-label="logo btn">
-                <img src="./logo.webp" alt="Logo" class="logo"/>
+                <enhanced:img src="/static/logo.png" alt="Logo" class="logo" width="80" height="80"/>
             </a>
         </div>
         

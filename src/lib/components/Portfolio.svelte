@@ -1,41 +1,50 @@
 <script lang="ts">
     import * as Icon from 'svelte-awesome-icons';
+    import photo_1 from '../../../static/gallery/photo_1.webp?enhanced'
+    import photo_2 from '../../../static/gallery/photo_2.webp?enhanced'
+    import photo_3 from '../../../static/gallery/photo_3.webp?enhanced'
+    import photo_4 from '../../../static/gallery/photo_4.webp?enhanced'
+    import photo_5 from '../../../static/gallery/photo_5.webp?enhanced'
+    import photo_6 from '../../../static/gallery/photo_6.webp?enhanced'
+    import photo_7 from '../../../static/gallery/photo_7.webp?enhanced'
+    import photo_8 from '../../../static/gallery/photo_8.webp?enhanced'
+    import photo_9 from '../../../static/gallery/photo_9.webp?enhanced'
 
     const imgGalleryName = [
         {
-            src: "photo_1.webp",
-            alt: "bain me"
+            src: photo_1,
+            alt: "bain me",
         },
         {
-            src: "photo_2.webp",
+            src: photo_2,
             alt: "photo 2"
         },
         {
-            src: "photo_3.webp",
+            src: photo_3,
             alt: "photo 3"
         },
         {
-            src: "photo_4.webp",
+            src: photo_4,
             alt: "photo 4"
         },
         {
-            src: "photo_5.webp",
+            src: photo_5,
             alt: "photo 5"
         },
         {
-            src: "photo_6.webp",
+            src: photo_6,
             alt: "photo 6"
         },
         {
-            src: "photo_7.webp",
+            src: photo_7,
             alt: "photo 7"
         },
         {
-            src: "photo_8.webp",
+            src: photo_8,
             alt: "photo 8"
         },
         {
-            src: "photo_9.webp",
+            src: photo_9,
             alt: "photo 9"
         }        
     ];
@@ -47,7 +56,6 @@
     let lightbox: HTMLElement|null = $state(null);
     let lightboxImg: HTMLImageElement|null = $state(null);
     let closeBtn: HTMLElement|null = $state(null);
-    let xmark: HTMLElement|null = $state(null);
 
     $effect(() => {
         images = Array.from(portfolio.querySelectorAll('img'));
@@ -92,8 +100,8 @@
     <div class="grid">
         {#each imgGalleryName as img, index}
             <div class="grid-item">
-                <button onclick={showLightbox} class="btn">
-                    <img src="./gallery/{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
+                <button onclick={showLightbox} class="btn" aria-label="zoom photo">
+                    <enhanced:img src="{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
                 </button>
             </div>
         {/each}
@@ -120,9 +128,10 @@
                 margin: 0;
                 padding: 0;
                 border: none;
-            }
-            & img {
-                width: 100%;
+                & img {
+                    width: 200px;
+                    height: auto;
+                }
             }
         }
     }

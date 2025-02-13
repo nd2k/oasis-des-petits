@@ -69,7 +69,7 @@
     <Card flipped={state.flippedCard1}>
         {#snippet front()}
             <div class="card-image">
-                <img src={image} alt="serviette" />
+                <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" />
             </div>
             <div class="card-body">
                 <div class="title">Formule bain</div>
@@ -94,12 +94,12 @@
     <Card flipped={state.flippedCard2}>
         {#snippet front()}
             <div class="card-image">
-                <img src={image} alt="serviette" />
+                <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" />
             </div>
             <div class="card-body">
-                <div class="title">Formule bain & reportage photos</div>
+                <div class="title">Formule bain & Tétra</div>
                 <h2>1h30</h2>
-                <h2>270€</h2>
+                <h2>120€</h2>
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE2)} />
@@ -119,7 +119,7 @@
     <Card flipped={state.flippedCard3}>
         {#snippet front()}
             <div class="card-image">
-                <img src={image} alt="serviette" />
+                <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" class="img-card" />
             </div>
             <div class="card-body">
                 <div class="title">Formule bain & reportage photos</div>
@@ -184,8 +184,8 @@
         gap: var(--size-fluid-4);
     & .card-image {
         padding: var(--size-fluid-2);
-        img {
-            border-radius: var(--radius-3);
+        .img-card img {
+            border-radius: 50%;
             max-width: 100%;
         }
     }
