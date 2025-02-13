@@ -1,3 +1,12 @@
+<script lang="ts">
+	import Seo from "$lib/components/Seo.svelte";
+
+</script>
+<Seo 
+    title="Le bain | Bain des merveilles" 
+    description="Vous trouverez tous les détails à propos du bain des merveilles. Le déroulement, les différentes étapes ainsi que les bienfaits pour votre bébé." 
+    type="Website"/>
+
 <section class="bath section">
     <h1 class="title-h1">Le bain</h1>
     <div class="section-content">
