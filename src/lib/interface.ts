@@ -33,3 +33,9 @@ export type Bubble = {
     top: string,
     left: string
 }
+
+declare global {
+    interface Window {
+      dataLayer: any[];
+    }
+  }
