@@ -4,7 +4,7 @@
 	import { onMount } from "svelte";
 
   onMount(() => {
-    if (browser && import.meta.env.MODE === "production") {
+    if (browser) {
       const GA_MEASUREMENT_ID = PUBLIC_GOOGLE_ANALYTICS_ID;
       setTimeout(() => {
         const script = document.createElement("script");
