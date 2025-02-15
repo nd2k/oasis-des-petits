@@ -19,12 +19,6 @@
             state.modalIsOpened = true;
         }
     }
-
-    $effect(() => {
-        console.log(state.height);
-        
-    })
-
 </script>
 
 <Analytics />
