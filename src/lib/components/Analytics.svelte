@@ -4,18 +4,15 @@
 	import { onMount } from "svelte";
 
   onMount(() => {
-    if (browser) {
+    if (typeof window !== 'undefined' && window) {
       const GA_MEASUREMENT_ID = PUBLIC_GOOGLE_ANALYTICS_ID;
       setTimeout(() => {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-        document.head.appendChild(script);
-
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) { window.dataLayer.push(args); }
-        gtag("js", new Date());
-        gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+        function gtag(key: string, arg: any) {
+          window.dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', GA_MEASUREMENT_ID);
       }, 1000);
     }
   });
