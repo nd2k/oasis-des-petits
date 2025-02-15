@@ -1,13 +1,9 @@
-<script lang="ts">
-    import { state } from '$lib/state.svelte';
-</script>
 
 <div class="hero-container">
     <enhanced:img 
-        src="/static/photo_1_modified.jpg?w=1280;640;400" 
-        sizes="(min-width:1920px) 1280px, (min-width:768px) 640px, (min-width:480) 400px"
-        height="520"
+        src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
+        height="480"
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
@@ -66,7 +62,6 @@
 {/if} -->
 
 <style>
-
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,8 +80,15 @@ picture {
     grid-area: 1 / 1 / -1 / -1;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     z-index: -1;
+}
+
+.img-hero {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .keyword {
