@@ -56,7 +56,6 @@
         animation: fadeIn 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
         transform-origin: center;
         position: absolute;
-        padding: 0 var(--size-fluid-2);
         top: 0%;
         width: 100%;
         height: 100%;
@@ -71,18 +70,20 @@
         & .keyword-1 {
             padding-top: 20px;
             padding-left: 210px;
+            padding-right: var(--size-fluid-3);
         }
         & .keyword-2 {
             padding-top: 340px;
-            padding-left: 0px;
+            padding-left: 20px;
             padding-bottom: 15px;
+            
         }
         & .keyword-3 {
-            padding-left: 20px;
+            padding-left: 40px;
             padding-bottom: 15px;
         }
         & .keyword-4 {
-            padding-left: 40px;
+            padding-left: 60px;
         }
     }
 
