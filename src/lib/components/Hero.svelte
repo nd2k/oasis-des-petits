@@ -1,9 +1,14 @@
+<script lang="ts">
+    import { state } from "$lib/state.svelte";
 
-<div class="hero-container">
+    let imgSize: number = state.width;
+</script>
+
+<div class="hero-container" style={`width: ${state.width}px`}>
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
-        height="480"
+        style={`width: ${state.width}px`}
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
@@ -73,7 +78,7 @@
         "word3 ."
         "word4 .";
     position: relative;
-    width: 100%;
+    height: 500px;
 }
 
 picture {
@@ -84,8 +89,7 @@ picture {
 }
 
 .img-hero {
-    width: 100%;
-    max-width: 470px;
+    max-width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
