@@ -58,25 +58,26 @@
             color: hsl(var(--white-0));
             font-size: var(--size-fluid-3);
             position: relative;
-            padding: var(--size-fluid-3);
+            
             overflow: hidden;
             white-space: nowrap;
             letter-spacing: .15em;
         }
         & .keyword-1 {
-            padding-top: 5%;
-            padding-left: 50%;
+            padding-top: 10px;
+            padding-left: 220px;
         }
         & .keyword-2 {
-            padding-top: 70%;
-            padding-bottom: 0;
+            padding-top: 350px;
+            padding-left: 20px;
+            padding-bottom: 15px;
         }
         & .keyword-3 {
-            padding-left: 10%;
-            padding-bottom: 0;
+            padding-left: 40px;
+            padding-bottom: 15px;
         }
         & .keyword-4 {
-            padding-left: 20%;
+            padding-left: 60px;
         }
     }
 
