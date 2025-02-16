@@ -19,8 +19,6 @@
             state.modalIsOpened = true;
         }
     }
-
-    $effect(() => console.log(state.width));
 </script>
 
 <Analytics />

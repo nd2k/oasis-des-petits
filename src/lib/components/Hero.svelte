@@ -1,14 +1,12 @@
 <script lang="ts">
     import { state } from "$lib/state.svelte";
-
-    $effect(() => console.log(state.width));
 </script>
 
-<div class="hero-container" style={`max-width: ${state.width}px`}>
+<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 158px);`}>
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
-        style={`width: ${state.width}px`}
+        style={`width: ${state.width}px; min-height: calc(100vh - 158px);`}
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
