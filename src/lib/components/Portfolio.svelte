@@ -120,7 +120,7 @@
         padding-bottom: var(--size-fluid-3);
         & .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            grid-template-columns: auto auto;
             gap: var(--size-fluid-1);
             margin: auto;
             width: 90%;
@@ -135,8 +135,9 @@
                     border-radius: var(--radius-2);
                 }
             }
-            & .grid-item-9 {
-                grid-column: span 2;
+            & .grid-item-8 {
+                grid-column-start: 1;
+                grid-column-end: 3;
             }
         }
         
