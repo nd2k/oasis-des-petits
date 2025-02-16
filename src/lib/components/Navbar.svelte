@@ -58,7 +58,7 @@
             </ul>
             {:else}
                 <button class="bar-menu" onclick={() => state.isNavExpanded = !state.isNavExpanded}>
-                    <Icon.BarsSolid />
+                    <Icon.BarsSolid size="2.5rem"/>
                 </button>
             {/if}
         </div>
