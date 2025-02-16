@@ -2,11 +2,11 @@
     import { state } from "$lib/state.svelte";
 </script>
 
-<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 400px);`}>
+<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 22rem);`}>
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
-        style={`width: ${state.width}px; min-height: calc(100vh - 400px);`}
+        style={`width: ${state.width}px; min-height: calc(100vh - 22rem);`}
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
@@ -22,48 +22,8 @@
         prénatales
     </div>
   </div>
-  
 
-<!-- {#if state.width < 930}
-<section class="hero-mobile">
-    <enhanced:img src="/static/photo_1_modified.webp" alt="Bébé dans son bain" height="500" class="img-hero" fetchpriority="high" />
-    <div class="keywords">
-        <div class="keyword keyword-1">
-            Renaissance
-        </div>
-        <div class="keyword keyword-2">
-            Libération
-        </div>
-        <div class="keyword keyword-3">
-            des mémoires
-        </div>
-        <div class="keyword keyword-4">
-            prénatales
-        </div>
-    </div>  
-</section>
-{:else}
-<section class="hero">
-    <div class="img-hero">
-        <div class="keyword-1">
-            Renaissance
-        </div>
-        <div class="keyword-2">
-            Libération
-        </div>
-        <div class="keyword-3">
-            des mémoires
-        </div>
-        <div class="keyword-4">
-            prénatales
-        </div>
-    </div>
-    <div class="slogan">
-        Test
-    </div>
-</section>
-{/if} -->
-
+  <!-- svelte-ignore css_unused_selector -->
 <style>
 .hero-container {
     display: grid;

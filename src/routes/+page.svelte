@@ -146,7 +146,7 @@
     </Card>
 </section>
 
-<section class="about section">
+<section class="about">
     <h1 class="title-h1">À propos</h1>
     <div class="section-content">
         <p>Laura Van Eeckhoudt - Certifiée baigneuse « Bain des Merveilles »</p>

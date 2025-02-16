@@ -97,16 +97,15 @@
 </script>
 
 <div class="portfolio" bind:this={portfolio}>
-    <div class="grid">
+    <div class="grid-container">
         {#each imgGalleryName as img, index}
-            <div class="grid-item">
-                <button onclick={showLightbox} class="btn" aria-label="zoom photo">
-                    <enhanced:img src="{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
-                </button>
-            </div>
+            <button onclick={showLightbox} aria-label="zoom photo" class="btn grid-item-{index}">
+                <enhanced:img src="{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
+            </button>
         {/each}
     </div>
 </div>
+
 {#if isVisible}
     <div class="lightbox" bind:this={lightbox} onclick={closeLightbox} onkeydown={closeKeyAction} role="button" tabindex="-1">
         <button class="close" onclick={closeLightbox} bind:this={closeBtn}><Icon.CircleXmarkSolid /></button>
@@ -118,12 +117,37 @@
 
 <style>
     .portfolio {
+        padding-bottom: var(--size-fluid-3);
+        & .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: var(--size-fluid-1);
+            margin: auto;
+            width: 90%;
+            & button {
+                margin: 0;
+                padding: 0;
+                border: none;
+                & .thumbnail {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: var(--radius-2);
+                }
+            }
+            & .grid-item-9 {
+                grid-column: span 2;
+            }
+        }
+        
+    }
+    /* .portfolio {
         position: relative;
-        padding: var(--size-fluid-2) 0;
+        padding: var(--size-fluid-2);
         .grid {
             position: relative;
             column-count: 2;
-            gap: var(--size-px-3);
+            grid-column-gap: var(--size-px-3);
             & .grid-item {
                 margin: 0;
                 margin-bottom: var(--size-px-1);
@@ -132,13 +156,13 @@
                     padding: 0;
                     border: none;
                     & .thumbnail {
-                        width: 190px;
+                        max-width: 190px;
                         height: auto;
                     }
                 }
             }
         }
-    }
+    } */
 
     .lightbox {
             display: flex;

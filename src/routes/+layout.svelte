@@ -6,9 +6,9 @@
     import { state } from '$lib/state.svelte';
 	import Loader from '$lib/components/Loader.svelte';
 	import Analytics from '$lib/components/Analytics.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
     let { children } = $props();
-    let year = new Date().getFullYear();
 
     function closeNavbar() {
         state.isNavExpanded = false;
@@ -24,16 +24,16 @@
 <Analytics />
 
 <svelte:window bind:outerWidth={state.width} bind:outerHeight={state.height} />
-<div class="root" style={`max-width: ${state.width}px`}>
-<TopHeader />
-<Navbar isMobile={ state.width < 930}/>
-<div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>     
-    <Loader />
-    <main>
-        {@render children()}
-    </main>
-</div>
-<footer>Laura Van Eeckhoudt &copy;{year}</footer>
+<div class="root" style={`max-width: ${state.width}px;`}>
+    <TopHeader />
+    <Navbar isMobile={ state.width < 930}/>
+    <div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>     
+        <Loader />
+        <main>
+            {@render children()}
+        </main>
+    </div>
+    <Footer />
 </div>
 
 <style>
@@ -74,22 +74,5 @@
     }
     .wrapper {
         min-height: calc(100vh - 9rem);
-        /* & svg {
-            position: absolute;
-            z-index: -1000;
-            width: 100vw;
-            height: 600vh;
-        } */
-    }
-    footer {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: hsl(var(--beige-1));
-        color: hsl(var(--dark-green-1));
-        padding: 0;
-        margin: 0;
-        height: var(--size-fluid-4);
     }
 </style>
