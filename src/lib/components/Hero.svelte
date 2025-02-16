@@ -1,10 +1,10 @@
 <script lang="ts">
     import { state } from "$lib/state.svelte";
 
-    let imgSize: number = state.width;
+    $effect(() => console.log(state.width));
 </script>
 
-<div class="hero-container" style={`width: ${state.width}px`}>
+<div class="hero-container" style={`max-width: ${state.width}px`}>
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
@@ -69,16 +69,16 @@
 <style>
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 6fr 1fr 1fr 1fr;
     grid-template-areas: 
-        ". word1"
-        ". ."
-        "word2 ."
-        "word3 ."
-        "word4 .";
+        "word1"
+        "."
+        "word2"
+        "word3"
+        "word4";
     position: relative;
-    height: 500px;
+    height: 100%;
 }
 
 picture {
@@ -89,7 +89,6 @@ picture {
 }
 
 .img-hero {
-    max-width: 100%;
     height: auto;
     display: block;
     object-fit: cover;

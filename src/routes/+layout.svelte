@@ -19,11 +19,14 @@
             state.modalIsOpened = true;
         }
     }
+
+    $effect(() => console.log(state.width));
 </script>
 
 <Analytics />
 
-<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} />
+<svelte:window bind:outerWidth={state.width} bind:outerHeight={state.height} />
+<div class="root" style={`max-width: ${state.width}px`}>
 <div class="top-header">
     <div class="name">
         Laura Van Eeckhoudt<br>
@@ -51,6 +54,7 @@
     </main>
 </div>
 <footer>Laura Van Eeckhoudt &copy;{year}</footer>
+</div>
 
 <style>
     :global(.title-h1) {
