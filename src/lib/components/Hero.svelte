@@ -2,11 +2,11 @@
     import { state } from "$lib/state.svelte";
 </script>
 
-<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 15rem);`}>
+<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 13rem);`}>
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
         alt="Bébé dans son bain"
-        style={`width: ${state.width}px; min-height: calc(100vh - 15rem);`}
+        style={`width: ${state.width}px; min-height: calc(100vh - 13rem);`}
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
