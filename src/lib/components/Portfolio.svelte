@@ -142,28 +142,6 @@
         }
         
     }
-    /* .portfolio {
-        position: relative;
-        padding: var(--size-fluid-2);
-        .grid {
-            position: relative;
-            column-count: 2;
-            grid-column-gap: var(--size-px-3);
-            & .grid-item {
-                margin: 0;
-                margin-bottom: var(--size-px-1);
-                & .btn {
-                    margin: 0;
-                    padding: 0;
-                    border: none;
-                    & .thumbnail {
-                        max-width: 190px;
-                        height: auto;
-                    }
-                }
-            }
-        }
-    } */
 
     .lightbox {
             display: flex;
