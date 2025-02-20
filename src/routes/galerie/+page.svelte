@@ -5,8 +5,12 @@
 </script>
 
 <Seo 
-    title="Galerie | Photos prises lors de nos prestations" 
-    description="Le protfolio vous donnera une meilleures idées des formules que nous proposons et de l'ambiance qui règne lors de nos séances." 
+    title="Oasis-des-petits | Gallerie photos du bain des merveilles" 
+    description="Une sélection de photos concernant le bain des merveilles, bain post-natal" 
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be,
+    oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé,
+    Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation,
+    Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
     type="Website"/>
 
 <section class="galery">

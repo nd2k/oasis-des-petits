@@ -12,7 +12,7 @@
             <a href="tel:+32479411112">
                 <Icon.PhoneSolid />
             </a>
-            <a href="https://www.facebook.com/laura.vaneeckhoudt" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61571857000153" target="_blank" rel="noopener noreferrer">
                 <Icon.FacebookBrands />
             </a>
             <a href="https://www.instagram.com/oasis_des_petits/" target="_blank" rel="noopener noreferrer">

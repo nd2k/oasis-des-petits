@@ -74,5 +74,6 @@
     }
     .wrapper {
         min-height: calc(100vh - 9rem);
+        display: block;
     }
 </style>

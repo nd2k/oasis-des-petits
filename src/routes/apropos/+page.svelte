@@ -1,3 +1,16 @@
+<script lang="ts">
+	import Seo from "$lib/components/Seo.svelte";
+</script>
+
+<Seo 
+    title="Oasis-des-petits | À propos de Laura Van Eeckhoudt" 
+    description="À propos de Laura Van Eeckhoudt - Certifiée baigneuse « Bain des Merveilles »" 
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be,
+    oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé,
+    Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation,
+    Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
+    type="Website"/>
+
 <section class="about section">
     <h1 class="title-h1">À propos</h1>
     <div class="section-content">

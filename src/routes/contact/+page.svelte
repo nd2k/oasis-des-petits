@@ -40,7 +40,7 @@
                 <Textarea id="message" label="Posez votre question" bind:value={state.bookingForm.message}>
                     <Icon.CircleQuestionSolid />
                 </Textarea>
-                <Button disabled={disabledButton()} type={ButtonType.SUBMIT}/>
+                <Button disabled={disabledButton()} type={ButtonType.SUBMIT} label="Envoyer"/>
             </form>
     </div>
 </section>

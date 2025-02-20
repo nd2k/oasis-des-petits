@@ -4,7 +4,6 @@
     import photo_2 from '$lib/gallery/photo_2.webp?enhanced'
     import photo_3 from '$lib/gallery/photo_3.webp?enhanced'
     import photo_4 from '$lib/gallery/photo_4.webp?enhanced'
-    import photo_5 from '$lib/gallery/photo_5.webp?enhanced'
     import photo_6 from '$lib/gallery/photo_6.webp?enhanced'
     import photo_7 from '$lib/gallery/photo_7.webp?enhanced'
     import photo_8 from '$lib/gallery/photo_8.webp?enhanced'
@@ -26,10 +25,6 @@
         {
             src: photo_4,
             alt: "photo 4"
-        },
-        {
-            src: photo_5,
-            alt: "photo 5"
         },
         {
             src: photo_6,
@@ -134,10 +129,6 @@
                     object-fit: cover;
                     border-radius: var(--radius-2);
                 }
-            }
-            & .grid-item-8 {
-                grid-column-start: 1;
-                grid-column-end: 3;
             }
         }
         

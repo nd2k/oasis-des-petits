@@ -25,8 +25,12 @@
 </script>
 
 <Seo 
-    title="Nos formules | Descriptions de nos services" 
-    description="Vous trouverez toutes les informations concernant nos trois formules tarifaires comme la durée de la prestation, ce qu'elle comprend et son prix." 
+    title="Oasis-des-petits | Nos formules" 
+    description="Présentation de nos formules disponibles" 
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be,
+    oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé,
+    Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation,
+    Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
     type="Website"/>
     
 <section class="formules">
@@ -43,7 +47,7 @@
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE1)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}
@@ -68,7 +72,7 @@
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE2)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}
@@ -93,7 +97,7 @@
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE3)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}

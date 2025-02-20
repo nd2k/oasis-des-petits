@@ -17,6 +17,10 @@
 <Seo 
     title="Laura Van Eeckhoudt | Certifiée baigneuse « Bain des Merveilles »" 
     description="Le bain des merveilles est un bain enveloppé qui a pour but de libérer les mémoires prénatales." 
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be,
+    oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé,
+    Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation,
+    Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
     type="Website"/>
 
 <Modal>
@@ -43,13 +47,12 @@
             <Textarea id="message" label="Posez votre question" bind:value={state.bookingForm.message}>
                 <Icon.CircleQuestionSolid />
             </Textarea>
-            <Button disabled={disabledButton()} type={ButtonType.SUBMIT}/>
+            <Button disabled={disabledButton()} type={ButtonType.SUBMIT} label="Envoyer"/>
         </form>
     </div>
 </Modal>
 
 <Hero />
-
 <section class="bath section">
     <h1 class="title-h1">Le bain</h1>
     <div class="section-content">
@@ -69,6 +72,7 @@
 
 <section class="formules">
     <h1 class="title-h1">Les Formules</h1>
+    <p class="section-content"> Le bain se réalise dans les 3 premières semaines de vie du bébé. Si votre bébé est né prématurément, pas de soucis, c’est la date du terme qui compte</p>
     <Card flipped={state.flippedCard1}>
         {#snippet front()}
             <div class="card-image">
@@ -77,20 +81,22 @@
             <div class="card-body">
                 <div class="title">Formule bain</div>
                 <h2>1h30</h2>
-                <h2>100€</h2>
+                <h2>90€</h2>
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE1)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}
-        <div class="card-body">
+        <div class="card-body card-body-back">
             <div class="title">Description</div>
-            <p>Notre formule comprend ...</p>
+            <p>Cette formule comprend l’entretien avec les parents, le bain, ainsi qu’un moment de peau à peau. 
+                Celle-ci dure environ 1h30.</p>
         </div>
         <div class="card-footer">
-            <Button label="Retour" onclick={() => flipCard(Topics.FORMULE1)} />
+            <Button label="Retour" variant="accent-3" onclick={() => flipCard(Topics.FORMULE1)} />
+            <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
         </div>
         {/snippet}
     </Card>
@@ -102,20 +108,22 @@
             <div class="card-body">
                 <div class="title">Formule bain & Tétra</div>
                 <h2>1h30</h2>
-                <h2>120€</h2>
+                <h2>115€</h2>
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE2)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}
-        <div class="card-body">
+        <div class="card-body card-body-back">
             <div class="title">Description</div>
-            <p>Notre formule comprend ...</p>
+            <p>Cette formule comprend l’entretien avec les parents, le choix du tetra pour l’emmaillotement (que vous garderez en 
+                souvenir à la fin de la séance), le bain ainsi qu’un moment de peau à peau. Celle-ci dure environ 1h30. </p>
         </div>
         <div class="card-footer">
-            <Button label="Retour" onclick={() => flipCard(Topics.FORMULE2)} />
+            <Button label="Retour" variant="accent-3" onclick={() => flipCard(Topics.FORMULE2)} />
+            <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
         </div>
         {/snippet}
     </Card>
@@ -127,20 +135,22 @@
             <div class="card-body">
                 <div class="title">Formule bain & reportage photos</div>
                 <h2>1h30</h2>
-                <h2>270€</h2>
+                <h2>265€</h2>
             </div>
             <div class="card-footer">
                 <Button label="En savoir plus" variant="accent-3" onclick={() => flipCard(Topics.FORMULE3)} />
-                <Button label="Reservez" onclick={() => openModal(Topics.FORMULE1)} />
+                <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
             </div>
         {/snippet}
         {#snippet back()}
-        <div class="card-body">
+        <div class="card-body card-body-back">
             <div class="title">Description</div>
-            <p>Notre formule comprend ...</p>
+            <p>Cette formule comprend l’entretien avec les parents, le bain, un moment de peau à peau ainsi qu’un reportage photos du bain (10 photos comprises). 
+                Celle-ci dure environ 1h30</p>
         </div>
         <div class="card-footer">
-            <Button label="Retour" onclick={() => flipCard(Topics.FORMULE3)} />
+            <Button label="Retour" variant="accent-3" onclick={() => flipCard(Topics.FORMULE3)} />
+            <Button label="Réserver" onclick={() => openModal(Topics.FORMULE1)} />
         </div>
         {/snippet}
     </Card>
@@ -193,28 +203,41 @@
         }
     }
     & .card-body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: var(--size-fluid-3);
-            min-height: 10rem;
-            & .title {
-                font-size: var(--size-fluid-3);
-                text-align: center;
-            }
-            & h2 {
-                font-size: var(--size-fluid-2);
-            }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--size-fluid-3);
+        min-height: 10rem;
+        & .title {
+            font-size: var(--size-fluid-3);
+            text-align: center;
+            color: hsl(var(--dark-green-1));
         }
-        & .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--size-fluid-2);
-            padding: var(--size-fluid-2);
+        & h2 {
+            font-size: var(--size-fluid-2);
         }
     }
+    & .card-body-back {
+        padding: var(--size-fluid-4);
+        display: flex;
+        height: 100%;
+        & .title {
+            align-items: flex-start;
+        }
+        & p {
+            flex: 1 auto;
+        }
+    }
+    & .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--size-fluid-2);
+        padding: var(--size-fluid-2);
+    }
+}
+
     .section-content {
         padding: 0 var(--size-fluid-4);
     }
