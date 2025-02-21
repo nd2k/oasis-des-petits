@@ -3,6 +3,8 @@ import { Topics, ValidationState } from "./interface";
 export let state = $state({
     width: 0,
     height: 0,
+    isDesktop: false,
+    isMobile: false,
     isNavExpanded: false,
     modalIsOpened: false,
     isLoading: false,

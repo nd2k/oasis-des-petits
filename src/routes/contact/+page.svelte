@@ -12,9 +12,10 @@
 </script>
 
 <Seo 
-    title="Contactez-nous | Posez vos questions »" 
-    description="N'hésitez pas à nous contacter afin d'organiser un entretien en présentiel ou par téléphone afin d'obtenir toutes les informations nécéssaires." 
-    type="Website"/>
+    title="Oasis-des-petits | Contacter-nous" 
+    description="ÀContacter nous pour avoir plus de renseignements à propos du bain des merveilles" 
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
+    type="Website" />
 
 <section>
     <div class="contact-container">

@@ -34,9 +34,6 @@
             href:"/contact"
         }
     ]
-
-    export let isMobile: boolean = false;
-
 </script>
 
 <nav>
@@ -48,7 +45,7 @@
         </div>
         
         <div class="menu-container">
-            {#if !isMobile}
+            {#if !state.isMobile}
             <ul>
                 {#each links as link}
                     <li>
@@ -63,7 +60,7 @@
             {/if}
         </div>
     </div>
-    {#if isMobile && state.isNavExpanded}
+    {#if state.isMobile && state.isNavExpanded}
     <ul class="menu-container mobile" transition:slide={{ duration: 300 }}>
         {#each links as link }
             <li>

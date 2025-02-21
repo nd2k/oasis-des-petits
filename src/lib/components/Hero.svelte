@@ -2,11 +2,11 @@
     import { state } from "$lib/state.svelte";
 </script>
 
-<div class="hero-container" style={`max-width: ${state.width}px; min-height: calc(100vh - 13rem);`}>
+{#if state.isMobile }
+<div class="hero-container-mobile">
     <enhanced:img 
         src="/static/photo_1_modified.jpg" 
-        alt="Bébé dans son bain"
-        style={`width: ${state.width}px; min-height: calc(100vh - 13rem);`}
+        alt="Bébé dans son bain des merveilles"
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
@@ -22,10 +22,28 @@
         prénatales
     </div>
   </div>
+{/if}
+
+{#if state.isDesktop }
+<div class="hero-container-desktop">
+    <div class="hero-placeholder">
+        <enhanced:img 
+        src="/static/photo_1_modified.jpg" 
+        alt="Bébé dans son bain des merveilles"
+        class="img-hero-desktop" 
+        fetchpriority="high" />
+    </div>
+    <div class="intro-text">
+        <span class="word-1">Libération des mémoires prénatales</span>
+        <span class="word-2">Renaissance</span>
+    </div>
+  </div>
+{/if}
+
 
   <!-- svelte-ignore css_unused_selector -->
 <style>
-.hero-container {
+.hero-container-mobile {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 6fr 1fr 1fr 1fr;
@@ -36,13 +54,52 @@
         "word3"
         "word4";
     position: relative;
-    height: 100%;
+    max-width: 100%;
+}
+
+.hero-container-desktop {
+    display: flex;
+    position: relative;
+    max-width: 100%;
+    & .hero-placeholder {
+        padding: var(--size-fluid-2);
+        & .img-hero-desktop {
+            max-height: 70dvh;
+            object-fit: cover;
+            border-radius: var(--radius-3);
+        }
+    }
+    & .intro-text {
+        padding: var(--size-fluid-6);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "word1"
+        "word2";
+        & .word-1 {
+            grid-area: word1;
+            font-size: var(--size-fluid-4);
+            color: hsl(var(--dark-green-1));
+            align-self: center;
+            animation: 2s var(--animation-slide-in-down);
+        }
+
+        & .word-2 {
+            grid-area: word2;
+            font-size: var(--size-fluid-4);
+            justify-self: flex-end;
+            color: hsl(var(--dark-green-1));
+            align-self: center;
+            animation: 2s var(--animation-slide-in-up);
+        }
+    }
 }
 
 picture {
     grid-area: 1 / 1 / -1 / -1;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     z-index: -1;
 }
 
@@ -50,6 +107,7 @@ picture {
     height: auto;
     display: block;
     object-fit: cover;
+    width: var(--size);
 }
 
 .keyword {
