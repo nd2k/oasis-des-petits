@@ -10,28 +10,28 @@
     const links = [ 
         { 
             label: "Accueil",
-            href: "/"
+            href: base + "/"
         },
         {
             label: "Le bain",
-            href: "/lebain"
+            href: base + "/lebain"
         },
         {
             label: "Formules",
-            href: "/formules"
+            href: base + "/formules"
         },
         {
             label: "À propos",
-            href: "/apropos"
+            href: base + "/apropos"
         },
         
         {
             label: "Galerie",
-            href: "/galerie"
+            href: base + "/galerie"
         },
         {
             label: "Contact",
-            href:"/contact"
+            href: base + "/contact"
         }
     ]
 </script>

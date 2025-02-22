@@ -13,6 +13,7 @@
     <enhanced:img 
         src="/static/photo_1_modified.jpg?w=400"
         sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+        alt="Bébé dans son bain des merveilles"
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
