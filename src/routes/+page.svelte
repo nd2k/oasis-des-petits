@@ -180,8 +180,8 @@
                 <enhanced:img
                             src="/static/photo_5.webp?w=1280;640;400"
                             sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-                            alt="Bain des merveilles" 
-                            class="bath-img" />
+                            alt="Laura Van Eeckhoudt - Certifiée baigneuse Bain des Merveilles"
+                            class="img-about" />
             </div>
             <div class="about-text">
                 <p>Laura Van Eeckhoudt - Certifiée baigneuse « Bain des Merveilles »</p>
@@ -329,10 +329,12 @@
                 flex: 1;
                 object-fit: cover;
                 object-position: center top;
-                border-radius: var(--radius-3);
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                & .img-about {
+                    border-radius: var(--radius-3);
+                }
             }
             & .about-text {
                 flex: 1;
