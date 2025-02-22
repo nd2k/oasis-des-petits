@@ -167,3 +167,8 @@ function resetFields() {
         errorMessage: ''
     };
 }
+
+export function setScreenSize() {
+    state.isDesktop = state.width > 1024;
+    state.isMobile = state.width <= 1024; 
+}

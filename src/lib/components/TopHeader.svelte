@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { state } from '$lib/state.svelte';
     import * as Icon from 'svelte-awesome-icons';
 </script>
 
 <div class="top-header">
-    <div class="name">
+    <div class="{state.isDesktop ? "name-desktop" : "name-mobile"}">
         Laura Van Eeckhoudt<br>
         <small>Certifiée baigneuse « Bain des Merveilles »</small>
     </div>
@@ -32,10 +33,16 @@
         color: hsl(var(--white-0));
         font-size: var(--size-fluid-2);
         padding: var(--size-fluid-1);
-        & .name {
+        & .name-mobile {
             font-size: var(--size-px-3);
             & small {
                 font-size: var(--size-px-2);
+            }
+        }
+        & .name-desktop {
+            font-size: var(--size-px-4);
+            & small {
+                font-size: var(--size-px-3);
             }
         }
         & .social-media {
@@ -45,6 +52,9 @@
                 gap: var(--size-fluid-2);
                 a {
                     color: hsl(var(--white-0));
+                }
+                a:hover {
+                    color: hsl(var(--dark-green-1));
                 }
             }
         }

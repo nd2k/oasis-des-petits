@@ -1,11 +1,10 @@
 @import './reset.css';
 
 :root {
-    --beige-1: 41, 66%, 89%;
-    --beige-2: 35, 51%, 84%;
+    --beige-1: 35, 51%, 84%;
+    --beige-2: 50, 51%, 84%;
     --dark-green-1: 187, 60%, 25%;
-    --dark-green-2: 187, 0%, 20%;
-    --dark-green-3: 168, 40%, 80%;
+    --dark-green-2: 200, 60%, 25%;
     --light-green-1: 150, 10%, 68%;
     --light-green-2: 150, 10%, 48%;
     --green-3: 187, 60%, 60%;
@@ -28,6 +27,8 @@ body {
     font-family:  'Noto Sans Variable', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-width: 100%;
+    height: auto;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 

@@ -11,11 +11,10 @@
 	import Field from '$lib/components/Field.svelte';
     import Button from '$lib/components/Button.svelte';
     import * as Icon from 'svelte-awesome-icons';
-    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation } from '$lib/utils';
+    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation, setScreenSize } from '$lib/utils';
 	import { ButtonType } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
-	import { onMount } from 'svelte';
 
     let { children } = $props();
 
@@ -29,16 +28,13 @@
         }
     }
 
-    function onresize() {
-         state.isDesktop = state.width > 769;
-         state.isMobile = state.width <= 769; 
+    function detectScreenSize() {
+         setScreenSize();
          console.log(state.isMobile); 
     }
-
-    onMount(() => onresize)
 </script>
 
-<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} {onresize} />
+<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} on:resize={detectScreenSize} />
 
 <Analytics />
 <Modal>
@@ -88,6 +84,7 @@
         padding: var(--size-fluid-4);
         color: hsl(var(--dark-green-1));
         display: inline-block;
+        align-self: flex-start;
     }
     :global(.title-h1::after) {
         content: "";
@@ -131,8 +128,17 @@
         font-size: var(--size-fluid-2);
        }
     }
+    .root {
+        display: flex;
+        flex-direction: column;
+    }
     .wrapper {
         min-height: calc(100vh - 9rem);
         display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
     }
 </style>

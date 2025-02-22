@@ -23,7 +23,7 @@
         flex-direction: column;
         perspective: 1000px;
         & .card {
-            width: var(--size-fluid-10);
+            width: clamp(20rem, 30vw, 25rem);
             height: var(--size-fluid-20);
             position: relative;
             transform-style: preserve-3d;

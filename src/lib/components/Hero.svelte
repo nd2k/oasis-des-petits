@@ -1,12 +1,18 @@
 <script lang="ts">
     import { state } from "$lib/state.svelte";
+	import { setScreenSize } from "$lib/utils";
+	import { onMount } from "svelte";
+
+    onMount(() => {
+        setScreenSize();
+    })
 </script>
 
-{#if state.isMobile }
+{#if state.isMobile}
 <div class="hero-container-mobile">
     <enhanced:img 
-        src="/static/photo_1_modified.jpg" 
-        alt="Bébé dans son bain des merveilles"
+        src="/static/photo_1_modified.jpg?w=400"
+        sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
         class="img-hero" 
         fetchpriority="high" />
     <div class="keyword keyword-1">
@@ -24,21 +30,22 @@
   </div>
 {/if}
 
-{#if state.isDesktop }
+{#if state.isDesktop}
 <div class="hero-container-desktop">
     <div class="hero-placeholder">
         <enhanced:img 
-        src="/static/photo_1_modified.jpg" 
-        alt="Bébé dans son bain des merveilles"
-        class="img-hero-desktop" 
-        fetchpriority="high" />
+            src="/static/photo_1_modified.jpg?w=1280;640;400"
+            sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+            alt="Bébé dans son bain des merveilles"
+            class="img-hero-desktop" 
+            fetchpriority="high" />
     </div>
     <div class="intro-text">
         <span class="word-1">Libération des mémoires prénatales</span>
         <span class="word-2">Renaissance</span>
     </div>
   </div>
-{/if}
+  {/if}
 
 
   <!-- svelte-ignore css_unused_selector -->

@@ -8,6 +8,8 @@
     import photo_7 from '$lib/gallery/photo_7.webp?enhanced'
     import photo_8 from '$lib/gallery/photo_8.webp?enhanced'
     import photo_9 from '$lib/gallery/photo_9.webp?enhanced'
+	import { setScreenSize } from '$lib/utils';
+	import { onMount } from 'svelte';
 
     const imgGalleryName = [
         {
@@ -44,6 +46,7 @@
         }        
     ];
     
+    let { isMobile } = $props();
     let currentIndex = $state(0);
     let isVisible = $state(false);
     let portfolio: HTMLElement;
@@ -51,6 +54,10 @@
     let lightbox: HTMLElement|null = $state(null);
     let lightboxImg: HTMLImageElement|null = $state(null);
     let closeBtn: HTMLElement|null = $state(null);
+
+    onMount(() => {
+        setScreenSize();
+    })
 
     $effect(() => {
         images = Array.from(portfolio.querySelectorAll('img'));
@@ -92,7 +99,7 @@
 </script>
 
 <div class="portfolio" bind:this={portfolio}>
-    <div class="grid-container">
+    <div class="{isMobile ? "grid-container" : "grid-container desktop"}">
         {#each imgGalleryName as img, index}
             <button onclick={showLightbox} aria-label="zoom photo" class="btn grid-item-{index}">
                 <enhanced:img src="{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
@@ -131,7 +138,9 @@
                 }
             }
         }
-        
+        & .desktop {
+            grid-template-columns: auto auto auto auto;
+        }
     }
 
     .lightbox {
