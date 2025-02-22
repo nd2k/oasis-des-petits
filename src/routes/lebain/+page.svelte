@@ -63,8 +63,8 @@
         align-items: flex-start;
         justify-content: center;
         font-size: clamp(0.5rem, 10vw, 1rem);
-        margin: var(--size-fluid-4);
         & .section-content-bath-desktop {
+            margin: var(--size-fluid-4);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -86,6 +86,9 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+        & .section-content-bath {
+            margin: var(--size-fluid-4);
         }
     }
 </style>

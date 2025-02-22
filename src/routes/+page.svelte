@@ -225,8 +225,8 @@
         align-items: flex-start;
         justify-content: center;
         font-size: clamp(0.5rem, 10vw, 1rem);
-        margin: var(--size-fluid-4);
         & .section-content-bath-desktop {
+            margin: var(--size-fluid-4);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -248,6 +248,9 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+        & .section-content-bath {
+            margin: var(--size-fluid-4);
         }
     }
     .section-prices {
@@ -316,12 +319,12 @@
         justify-content: center;
         align-items: center;
         font-size: clamp(0.5rem, 10vw, 1rem);
-        margin: var(--size-fluid-4);
         & .section-content-about-desktop {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            margin: var(--size-fluid-4);
             & .about-img {
                 flex: 1;
                 object-fit: cover;
@@ -338,6 +341,9 @@
                 align-items: flex-start;
                 flex-direction: column;
             }
+        }
+        & .section-content-about {
+            margin: var(--size-fluid-4);
         }
     }
     .section-portfolio {
