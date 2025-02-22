@@ -49,23 +49,27 @@
 <style>
     section {
         padding: var(--size-fluid-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         & .contact-container {
-        padding: var(--size-fluid-4);
-        border: 1px solid hsl(var(--dark-green-1));
-        border-radius: var(--radius-3);
-        box-shadow: var(--shadow-4);
-            & p {
-                border-left: 2px solid hsl(var(--dark-green-1));
-                padding-left: var(--size-fluid-2);
-                margin-bottom: var(--size-fluid-3);
-                font-size: var(--size-fluid-2);
-            }
-            & form {
-                display: flex;
-                flex-direction: column;
-                gap: var(--size-fluid-2);
+            padding: var(--size-fluid-4);
+            border: 1px solid hsl(var(--dark-green-1));
+            border-radius: var(--radius-3);
+            box-shadow: var(--shadow-4);
+            max-width: 50dvw;
+                & p {
+                    border-left: 2px solid hsl(var(--dark-green-1));
+                    padding-left: var(--size-fluid-2);
+                    margin-bottom: var(--size-fluid-3);
+                    font-size: var(--size-fluid-2);
+                }
+                & form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--size-fluid-2);
+                }
             }
         }
-    }
     
 </style>
