@@ -172,3 +172,11 @@ export function setScreenSize() {
     state.isDesktop = state.width > 1024;
     state.isMobile = state.width <= 1024; 
 }
+
+export function setBackgroundHeight() {
+    if (state.isMobile) {
+        state.backgroundHeight = 5400;
+    } else {
+        state.backgroundHeight = 4400;
+    }
+}

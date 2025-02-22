@@ -11,7 +11,7 @@
 	import Field from '$lib/components/Field.svelte';
     import Button from '$lib/components/Button.svelte';
     import * as Icon from 'svelte-awesome-icons';
-    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation, setScreenSize } from '$lib/utils';
+    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation, setBackgroundHeight, setScreenSize } from '$lib/utils';
 	import { ButtonType } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
@@ -31,12 +31,16 @@
 
     function detectScreenSize() {
          setScreenSize(); 
+         setBackgroundHeight();
     }
 
-    onMount(() => detectScreenSize());
+    onMount(() => {
+        detectScreenSize();
+        setBackgroundHeight();
+    });
 </script>
 
-<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} on:resize={detectScreenSize} />
+<svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} on:resize={detectScreenSize} on:orientationchange={detectScreenSize}/>
 
 <Analytics />
 <Modal>
@@ -142,5 +146,6 @@
     main {
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 </style>
