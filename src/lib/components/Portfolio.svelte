@@ -14,35 +14,35 @@
     const imgGalleryName = [
         {
             src: photo_1,
-            alt: "bain me",
+            alt: "bain des merveilles",
         },
         {
             src: photo_2,
-            alt: "photo 2"
+            alt: "bain des merveilles avec tétra"
         },
         {
             src: photo_3,
-            alt: "photo 3"
+            alt: "bain des merveilles avec tétra - oasis des petits"
         },
         {
             src: photo_4,
-            alt: "photo 4"
+            alt: "oasis-des-petits bain bien être "
         },
         {
             src: photo_6,
-            alt: "photo 6"
+            alt: "bain relaxant oasis des petits Belgique"
         },
         {
             src: photo_7,
-            alt: "photo 7"
+            alt: "bain post-natal - bain thérapeutique"
         },
         {
             src: photo_8,
-            alt: "photo 8"
+            alt: "bain agréable et relaxant"
         },
         {
             src: photo_9,
-            alt: "photo 9"
+            alt: "expérience extra utérine"
         }        
     ];
     

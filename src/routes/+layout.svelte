@@ -69,7 +69,7 @@
     </div>
 </Modal>
 
-<div class="root" style={`max-width: ${state.width}px;`}>
+<div class="root">
     <TopHeader />
     <Navbar />
     <div class="wrapper" onclick={closeNavbar} role="button" tabindex="-1" onkeydown={handleKeyAction}>     
@@ -122,13 +122,13 @@
        form {
         display: flex;
         flex-direction: column;
-        gap: var(--size-fluid-2);
+        gap: var(--size-fluid-1);
        }
        & p {
         border-left: 2px solid hsl(var(--dark-green-1));
         padding-left: var(--size-fluid-2);
         margin-bottom: var(--size-fluid-3);
-        font-size: var(--size-fluid-2);
+        font-size: clamp(0.5rem, 10vw, 1rem);
        }
     }
     .root {

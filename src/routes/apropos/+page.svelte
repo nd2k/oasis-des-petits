@@ -1,13 +1,12 @@
 <script lang="ts">
 	import Seo from "$lib/components/Seo.svelte";
     import { state } from "$lib/state.svelte";
-    import photo_5 from '$lib/gallery/photo_5.webp?enhanced';
 </script>
 
 <Seo 
     title="Oasis-des-petits | À propos de Laura Van Eeckhoudt" 
     description="À propos de Laura Van Eeckhoudt - Certifiée baigneuse « Bain des Merveilles »" 
-    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile, Belgique, Belgium, Wallonie"
     type="Website" />
 
 <section class="section-about">
@@ -35,9 +34,8 @@
         <div class="section-content-about-desktop">
             <div class="about-img">
                 <enhanced:img
-                            src={photo_5}
-                            width=500
-                            height=800
+                            src="/static/photo_5.webp?w=1280;640;400"
+                            sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
                             alt="Bain des merveilles" 
                             class="bath-img" />
             </div>

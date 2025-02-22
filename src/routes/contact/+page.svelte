@@ -14,7 +14,7 @@
 <Seo 
     title="Oasis-des-petits | Contacter-nous" 
     description="ÀContacter nous pour avoir plus de renseignements à propos du bain des merveilles" 
-    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
+    keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile, Belgique, Belgium, Wallonie"
     type="Website" />
 
 <section>
@@ -57,12 +57,11 @@
             border: 1px solid hsl(var(--dark-green-1));
             border-radius: var(--radius-3);
             box-shadow: var(--shadow-4);
-            max-width: 50dvw;
                 & p {
                     border-left: 2px solid hsl(var(--dark-green-1));
                     padding-left: var(--size-fluid-2);
                     margin-bottom: var(--size-fluid-3);
-                    font-size: var(--size-fluid-2);
+                    font-size: clamp(0.5rem, 10vw, 1rem);
                 }
                 & form {
                     display: flex;

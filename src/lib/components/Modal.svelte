@@ -59,7 +59,6 @@
       width: 80%;
       animation: fadeIn 0.3s ease-out;
       position: relative;
-
       & .close-button {
         background: none;
         border: none;

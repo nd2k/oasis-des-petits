@@ -72,7 +72,7 @@
                 border: none;
                 outline: none;
                 flex: 1;
-                font-size: var(--size-fluid-2);
+                font-size: clamp(0.8em, 10vw, 1.2em);
                 border-radius: 0;
                 width: 80%;
             }
@@ -84,10 +84,9 @@
                 top: 80%;
                 left: 0;
                 transform: translateY(-90%);
-                font-size: 1rem;
                 transition: all 0.2s ease;
                 pointer-events: none;
-                font-size: var(--size-fluid-2);
+                font-size: clamp(0.8em, 10vw, 1.2em)
             }
             & input:focus +label,
             input:not(.empty) +label {

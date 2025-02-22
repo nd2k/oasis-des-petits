@@ -45,7 +45,8 @@
     .accent-3:hover {
         background-color: hsl(var(--beige-2));
     }
-    button:disabled {
+    button:disabled,
+    button:disabled:hover {
         background-color: dimgrey;
         color: linen;
         opacity: 1;

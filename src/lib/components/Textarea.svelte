@@ -37,14 +37,13 @@
             color: hsl(var(--light-pink-1));
         }
         & label {
-            font-size: 1rem;
+            font-size: clamp(0.8em, 8vw, 1.2em);
             pointer-events: none;
-            font-size: var(--size-fluid-2);
         }
     }
     textarea {
         border-radius: var(--radius-3);
         padding: var(--size-fluid-2);
-        font-size: 1rem;
+         font-size: clamp(0.8em, 8vw, 1.2em);
     }
 </style>
