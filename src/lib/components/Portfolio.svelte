@@ -102,7 +102,12 @@
     <div class="{isMobile ? "grid-container" : "grid-container desktop"}">
         {#each imgGalleryName as img, index}
             <button onclick={showLightbox} aria-label="zoom photo" class="btn grid-item-{index}">
-                <enhanced:img src="{img.src}" alt="{img.alt}" data-index={index} class="thumbnail" />
+                <enhanced:img 
+                    src="{img.src}?w=1280;640;400"
+                    sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" 
+                    alt="{img.alt}" 
+                    data-index={index} 
+                    class="thumbnail" />
             </button>
         {/each}
     </div>

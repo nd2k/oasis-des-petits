@@ -4,7 +4,7 @@ export let state = $state({
     width: 0,
     height: 0,
     isDesktop: false,
-    isMobile: false,
+    isMobile: true,
     isNavExpanded: false,
     modalIsOpened: false,
     isLoading: false,

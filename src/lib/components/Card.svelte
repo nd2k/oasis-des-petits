@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { state } from "$lib/state.svelte";
     let { flipped = false, front, back } = $props();
 
 </script>
@@ -30,23 +29,6 @@
             transition: transform 0.6s;
         }
     }
-/*     
-    .card-container-desktop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex: 1;
-        perspective: 1000px;
-        margin: var(--size-fluid-3);
-        & .card {
-            width: clamp(17rem, 30vw, 25rem);
-            height: var(--size-fluid-20);
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-    } */
 
     .flipped {
         transform: rotateY(180deg);

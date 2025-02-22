@@ -15,6 +15,7 @@
 	import { ButtonType } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
+	import { onMount } from 'svelte';
 
     let { children } = $props();
 
@@ -32,6 +33,8 @@
          setScreenSize();
          console.log(state.isMobile); 
     }
+
+    onMount(() => detectScreenSize());
 </script>
 
 <svelte:window bind:innerWidth={state.width} bind:innerHeight={state.height} on:resize={detectScreenSize} />
