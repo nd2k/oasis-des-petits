@@ -88,7 +88,7 @@
             }
         }
         & .section-content-bath {
-            margin: var(--size-fluid-4);
+            margin: 0 var(--size-fluid-4);
         }
     }
 </style>

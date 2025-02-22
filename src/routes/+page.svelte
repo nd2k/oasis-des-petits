@@ -67,8 +67,8 @@
 <section class="section-prices">
     <span>
         <h1 class="title-h1">Les Formules</h1>
-    <span></span>
-    <p>Le bain se réalise dans les 3 premières semaines de vie du bébé. Si votre bébé est né prématurément, pas de soucis, c’est la date du terme qui compte</p>
+    </span>
+    <p>Le bain se réalise dans les 3 premières semaines de vie du bébé. Si votre bébé est né prématurément, pas de soucis, c’est la date du terme qui compte.</p>
     <div class={state.isMobile ? "section-content" : "section-content-desktop"}> 
         <Card flipped={state.flippedCard1}>
             {#snippet front()}
@@ -250,7 +250,7 @@
             }
         }
         & .section-content-bath {
-            margin: var(--size-fluid-4);
+            margin: 0 var(--size-fluid-4);
         }
     }
     .section-prices {
@@ -265,6 +265,7 @@
             display: flex;
             flex-direction: column;
             gap: var(--size-fluid-4);
+            margin-top: var(--size-fluid-4);
         }
         & .section-content-desktop {
             display: flex;
@@ -345,7 +346,7 @@
             }
         }
         & .section-content-about {
-            margin: var(--size-fluid-4);
+            margin: 0 var(--size-fluid-4);
         }
     }
     .section-portfolio {

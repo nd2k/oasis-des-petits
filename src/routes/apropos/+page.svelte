@@ -94,7 +94,7 @@
             }
         }
         & .section-content-about {
-            margin: var(--size-fluid-4);
+            margin: 0 var(--size-fluid-4);
         }
     }
 </style>

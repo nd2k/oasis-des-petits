@@ -118,6 +118,7 @@
             display: flex;
             flex-direction: column;
             gap: var(--size-fluid-4);
+            margin-top: var(--size-fluid-4);
         }
         & .section-content-desktop {
             display: flex;
