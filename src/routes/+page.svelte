@@ -100,7 +100,7 @@
         <Card flipped={state.flippedCard2}>
             {#snippet front()}
                 <div class="card-image">
-                    <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" />
+                    <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" class="card-img" />
                 </div>
                 <div class="card-body">
                     <div class="title">Formule bain & Tétra</div>
@@ -127,7 +127,7 @@
         <Card flipped={state.flippedCard3}>
             {#snippet front()}
                 <div class="card-image">
-                    <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" class="img-card" />
+                    <enhanced:img src="/static/serviette_2.webp" width="275" height="275" alt="serviette" class="card-img" />
                 </div>
                 <div class="card-body">
                     <div class="title">Formule bain & reportage photos</div>

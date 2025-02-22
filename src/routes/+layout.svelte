@@ -30,8 +30,7 @@
     }
 
     function detectScreenSize() {
-         setScreenSize();
-         console.log(state.isMobile); 
+         setScreenSize(); 
     }
 
     onMount(() => detectScreenSize());
