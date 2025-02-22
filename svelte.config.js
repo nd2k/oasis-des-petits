@@ -8,8 +8,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
-		paths: { relative: false }
+		adapter: adapter()
 	},
 	vitePlugin: [
 		enhancedImages()

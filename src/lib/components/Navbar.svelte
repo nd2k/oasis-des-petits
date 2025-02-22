@@ -10,30 +10,33 @@
     const links = [ 
         { 
             label: "Accueil",
-            href: base + "/"
+            href: "/"
         },
         {
             label: "Le bain",
-            href: base + "/lebain"
+            href: "/lebain"
         },
         {
             label: "Formules",
-            href: base + "/formules"
+            href: "/formules"
         },
         {
             label: "À propos",
-            href: base + "/apropos"
+            href: "/apropos"
         },
         
         {
             label: "Galerie",
-            href: base + "/galerie"
+            href: "/galerie"
         },
         {
             label: "Contact",
-            href: base + "/contact"
+            href: "/contact"
         }
     ]
+
+    $effect(() => console.log(base)
+    )
 </script>
 
 <nav>
@@ -49,7 +52,7 @@
             <ul>
                 {#each links as link}
                     <li>
-                        <a href={base + "/" + link.href} class="nav-link">{link.label}</a>
+                        <a href={base + link.href} class="nav-link">{link.label}</a>
                     </li>
                 {/each}
             </ul>
