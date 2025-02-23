@@ -1,40 +1,5 @@
 <script lang="ts">
   import { state } from "$lib/state.svelte";
-	import { onMount } from "svelte";
-
-  let { isMobile } = $props();
-
-  onMount(() => {
-    setBubbles();
-  })
-
-  function setBubbles() {
-    if (isMobile) {
-      state.bubbles = [
-        // { size: 200, color: 'hsl(var(--light-pink-1))', left: '-5%', top: '46vh' },
-        { size: 80, color: 'hsl(var(--dark-green-1))', left: '90%', top: '97vh' },
-        { size: 140, color: 'hsl(var(--light-pink-1))', left: '-5%', top: '131vh' },
-        { size: 300, color: 'hsl(var(--dark-green-1))', left: '40%', top: '200vh' },
-        { size: 200, color: 'hsl(var(--beige-1))', left: '0%', top: '270vh' },
-        { size: 400, color: 'hsl(var(--light-green-1))', left: '35%', top: '317vh' },
-        { size: 110, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '407vh' },
-        { size: 250, color: 'hsl(var(--dark-green-1))', left: '45%', top: '455vh' },
-        { size: 300, color: 'hsl(var(--light-green-1))', left: '5%', top: '570vh' },
-    ];
-    } else {
-      state.bubbles = [
-        { size: 500, color: 'hsl(var(--light-pink-1))', left: '80%', top: '0vh' },
-        { size: 300, color: 'hsl(var(--dark-green-1))', left: '50%', top: '70vh' },
-        { size: 600, color: 'hsl(var(--light-green-1))', left: '85%', top: '160vh' },
-        { size: 450, color: 'hsl(var(--beige-1))', left: '0%', top: '260vh' },
-        { size: 100, color: 'hsl(var(--light-pink-1))', left: '-10%', top: '300vh' },
-        { size: 600, color: 'hsl(var(--dark-green-1))', left: '50%', top: '305vh' },
-        { size: 600, color: 'hsl(var(--light-green-1))', left: '70%', top: '515vh' },
-    ];
-    }
-  }
-  
-  
 </script> 
 
 <!-- <div class="bubble-container" style="width: {state.width}px; height: {state.backgroundHeight}px" > -->

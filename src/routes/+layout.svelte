@@ -11,7 +11,7 @@
 	import Field from '$lib/components/Field.svelte';
     import Button from '$lib/components/Button.svelte';
     import * as Icon from 'svelte-awesome-icons';
-    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation, setBackgroundHeight, setScreenSize } from '$lib/utils';
+    import { disabledButton, emailValidation, firstNameValidation, handleSubmit, nameValidation, phoneValidation, setBackgroundHeight, setBubbles, setScreenSize } from '$lib/utils';
 	import { ButtonType } from '$lib/interface';
 	import Textarea from '$lib/components/Textarea.svelte';
 	import { enhance } from '$app/forms';
@@ -32,11 +32,13 @@
     function detectScreenSize() {
          setScreenSize(); 
          setBackgroundHeight();
+         setBubbles(state.isMobile);
     }
 
     onMount(() => {
         detectScreenSize();
         setBackgroundHeight();
+        setBubbles(state.isMobile);
     });
 </script>
 
