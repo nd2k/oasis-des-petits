@@ -14,11 +14,11 @@
     const imgGalleryName = [
         {
             src: photo_1,
-            alt: "bain des merveilles",
+            alt: "bain renaissance & bain naissance",
         },
         {
             src: photo_2,
-            alt: "bain des merveilles avec tétra"
+            alt: "bain des merveilles avec tétra - position foetale"
         },
         {
             src: photo_3,
@@ -26,23 +26,23 @@
         },
         {
             src: photo_4,
-            alt: "oasis-des-petits bain bien être "
+            alt: "oasis-des-petits bain bien être - mémoire prénatales"
         },
         {
             src: photo_6,
-            alt: "bain relaxant oasis des petits Belgique"
+            alt: "bain relaxant oasis des petits Belgique et détente"
         },
         {
             src: photo_7,
-            alt: "bain post-natal - bain thérapeutique"
+            alt: "bain post-natal - bain thérapeutique et sérénité"
         },
         {
             src: photo_8,
-            alt: "bain agréable et relaxant"
+            alt: "bain agréable et relaxant - Connexion"
         },
         {
             src: photo_9,
-            alt: "expérience extra utérine"
+            alt: "expérience extra utérine - Famille"
         }        
     ];
     

@@ -41,6 +41,7 @@ export let state = $state({
     },
     flippedCard1: false,
     flippedCard2: false,
-    flippedCard3: false
+    flippedCard3: false,
+    bubbles: [{ size: 0, color: '', top: '', left: ''}]
 });
 
