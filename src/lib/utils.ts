@@ -2,65 +2,6 @@ import { Topics, ValidationState, type Bubble } from './interface';
 import { state } from '$lib/state.svelte';
 import type { SubmitFunction } from '@sveltejs/kit';
 
-const colors = ['hsl(var(--light-pink-1))', 'hsl(var(--dark-green-1))', 'hsl(var(--light-green-1))', 'hsl(var(--light-green-1))'];
-const bubbleLevels = [
-    {
-        min: -20,
-        max: 0
-    },
-    {
-        min: 0,
-        max: 10
-    },
-    {
-        min: 10,
-        max: 20
-    },
-    {
-        min: 20,
-        max: 30
-    },
-    {
-        min: 30,
-        max: 40
-    },
-    {
-        min: 30,
-        max: 40
-    },
-    {
-        min: 40,
-        max: 50
-    },
-    {
-        min: 50,
-        max: 60
-    },
-    {
-        min: 60,
-        max: 70
-    },
-    {
-        min: 70,
-        max: 80
-    },
-    {
-        min: 80,
-        max: 90
-    },
-    {
-        min: 90,
-        max: 100
-    },
-    {
-        min: 100,
-        max: 110
-    },
-
-]
-let nbOfBubbles = 11;
-let maxSizeBubble = 500;
-
 export function emailValidation(email: string): void {
     let response = { validationState: ValidationState.NOTVALIDATED, errorMessage: '' };
     if (email.length > 0) {
@@ -175,8 +116,8 @@ export function setScreenSize() {
 
 export function setBackgroundHeight() {
     if (state.isMobile) {
-        state.backgroundHeight = 5400;
+        state.backgroundHeight = "595vh";
     } else {
-        state.backgroundHeight = 4400;
+        state.backgroundHeight = "540vh";
     }
 }
