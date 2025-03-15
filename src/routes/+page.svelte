@@ -8,7 +8,6 @@
 	import Portfolio from '$lib/components/Portfolio.svelte';
 	import Seo from '$lib/components/Seo.svelte';    
     import photo_9 from '$lib/gallery/photo_9.webp?enhanced';
-    import BubbleBackground from '$lib/components/BubbleBackground.svelte';
 </script>
 
 <Seo 
@@ -17,7 +16,6 @@
     keywords="oasis-des-petits, oasisdespetits, oasis des petits, oasis-des-petits Belgique, oasis des petits Belgique, oasis des petits be, oasis-des-petits.be, oasis des petits be, Laura van eeckhoudt, Laura Van Eeckhoudt, bain des merveilles, Ath, Bruxelles, Hainaut, Tournai, Mons, renaissance, Bain thérapeutique bébé, Bain emmailloté, Bain sensoriel, Bain bien-être nouveau-né, Bain relaxant pour bébé, Bain post-natal, Bain apaisant bébé, relaxation, Détente, émotions intra-utérines, rituel post-natal, position fœtale, soins à domicile"
     type="Website" />
 
-<BubbleBackground />
 <section class="section-hero">
     <Hero />
 </section>
