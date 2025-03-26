@@ -25,7 +25,7 @@
 
 @font-face {
     font-family: 'AdamScript';
-    src: url(AdamScript.ttf) format('truetype');
+    src: url(/AdamScript.ttf) format('truetype');
 }
 
 html,
