@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/noto-sans':
         specifier: ^5.1.1
         version: 5.1.1
+      '@fontsource/source-sans-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@sveltejs/adapter-vercel':
         specifier: ^5.5.3
         version: 5.5.3(@sveltejs/kit@2.15.2(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.17.3)(vite@5.4.11(@types/node@22.10.10)))(svelte@5.17.3)(vite@5.4.11(@types/node@22.10.10)))(rollup@4.30.1)
@@ -420,6 +423,9 @@ packages:
 
   '@fontsource-variable/noto-sans@5.1.1':
     resolution: {integrity: sha512-hO0ywqmXLSU2C++B/FQeklo/zBSQZhHJef6ik/lJNaPmagpdHkHgQb1zwMuC9pdTv7UZeuGp38ML19w2AzM0kw==}
+
+  '@fontsource/source-sans-pro@5.2.5':
+    resolution: {integrity: sha512-ypendqc4pYUc+EgF7qqPY9iVYEz1t/Qr03VojKxG/2g3dnpHa1B6DOlDxWQjQXDj5QrG6inEqGT0g+edjALZyg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1905,6 +1911,8 @@ snapshots:
       levn: 0.4.1
 
   '@fontsource-variable/noto-sans@5.1.1': {}
+
+  '@fontsource/source-sans-pro@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 

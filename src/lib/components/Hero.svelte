@@ -56,7 +56,6 @@
 .hero-container-mobile {
     position: relative;
     max-width: 100%;
-    background-color: chartreuse;
     z-index: -1;
         & picture {
             grid-area: 1 / 1 / -1 / -1;
@@ -76,7 +75,9 @@
             width: 100%;
             height: 100%;
             color: hsl(var(--white-0));
-            font-size: var(--size-fluid-3);
+            font-size: var(--size-fluid-4);
+            font-family:  'AdamScript', serif !important;
+            line-height: 1.4;
             white-space: nowrap;
             letter-spacing: .15em;
             animation: fadeIn 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
@@ -134,6 +135,9 @@
     & .intro-text {
         padding: var(--size-fluid-6);
         display: grid;
+        font-family:  'AdamScript', serif !important;
+        line-height: 1.4;
+        unicode-bidi: isolate;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 

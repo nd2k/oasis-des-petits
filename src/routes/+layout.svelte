@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '@fontsource-variable/noto-sans';
+    import '@fontsource/source-sans-pro/400.css';
     import '../styles/global.css';
     import TopHeader from '$lib/components/TopHeader.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';

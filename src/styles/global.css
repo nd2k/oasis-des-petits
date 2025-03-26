@@ -20,11 +20,17 @@
     --size-fluid-15: clamp(25rem, 35vw, 30rem);
     --size-fluid-18: clamp(30rem, 45vw, 35rem);
     --size-fluid-20: clamp(35rem, 50vw, 40rem);
+    --font-family-hero: 'Adam Script', sans-serif;
+}
+
+@font-face {
+    font-family: 'AdamScript';
+    src: url(AdamScript.ttf) format('truetype');
 }
 
 html,
 body {
-    font-family:  'Noto Sans Variable', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: auto;
