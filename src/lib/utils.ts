@@ -82,8 +82,6 @@ export function flipCard(topic: Topics) {
 
 export const handleSubmit: SubmitFunction = () => {
     state.isLoading = true;
-    console.log("call function");
-    
     return async({ update }) => {
         await update()
         state.isLoading = false;

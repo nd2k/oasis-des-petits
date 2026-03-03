@@ -4,15 +4,17 @@ import type { DataContact, EmailMessage } from '$lib/interface';
 import { redirect } from '@sveltejs/kit';
 import { GOOGLE_EMAIL, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN } from '$env/static/private';
 
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
         type: 'OAuth2',
         user: GOOGLE_EMAIL,
         clientId: GOOGLE_CLIENT_ID,
         clientSecret: GOOGLE_CLIENT_SECRET,
         refreshToken: GOOGLE_REFRESH_TOKEN,
-    }
+    },
 });
 
 transporter.verify(function(error, success) {
